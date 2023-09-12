@@ -1,7 +1,7 @@
-export const añadirProductoAlCarro  = (productoDelCarrito, productsData )=> {
+export const añadirProductoAlCarro  = (productoDelCarrito, producto )=> {
     
     const productoencarro = productoDelCarrito.find ((item) =>{
-return item.id === productsData.id;
+return item.id === producto.id;
 
     })
 
@@ -17,7 +17,7 @@ return item.id === productoencarro.id
     return [
         ...productoDelCarrito,
         {
-            ...productsData,
+            ...producto,
             quantity: 1,
         }
     ];

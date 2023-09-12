@@ -1,23 +1,14 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import {  agregarAlCarrito, sacarItem, vaciarCarrito } from '../../../redux/modalSlice/modalSlice';
-import { ProductosWrapperStylos,
-  ButtonStylos, 
-    ContadorButtonContainerStylos, 
-    ContainerCard, 
-    ModalFooter,
-    TotalStylos,
- } from './ModalStylos';
-import { productsData } from '../../../data/ticket';
+import {useSelector } from 'react-redux';
+import { ProductosWrapperStylos,TotalStylos} from './ModalStylos';
 import { formatoPrecio } from '../../../util/formatoPrecio';
-
+import ModalCont from '../../navbar/navbarModal/ModalCont';
 
 const CardModal = () => {
  
-  const {productoDelCarrito} = useSelector(state => state.modal);
+  const {productoDelCarrito}= useSelector(state => state.modal);
 
  
-  const dispatch = useDispatch();
 
   const totalPrecio = productoDelCarrito.reduce((acc, item) => {
         return (acc += item.precio * item.quantity)
@@ -26,42 +17,16 @@ const CardModal = () => {
 
   return (
     <>
-       <ProductosWrapperStylos>
     
-  {productoDelCarrito.length ? (
-    productoDelCarrito.map((item) => {
-      
-      const product = productsData.find((prod) => {
-        return prod.id === item.id;
-      });
-      
-      console.log( product);
-      return (
-        <div key={product.id}>
-          <img src={product.cardImg} alt={product.name} />
-          <h2>{product.name}</h2>
-          <h2>{formatoPrecio(product.precio)}</h2>
+       <ProductosWrapperStylos>
+       {
+       productoDelCarrito.length ? (  productoDelCarrito.map((item) => {
+        return <ModalCont {...item} key={item.id} />
+        }) ) : ( <h2>Tu carrito está vacío</h2> )
+        }
 
-          <ContainerCard>
-          
-            <ContadorButtonContainerStylos>
-              <ButtonStylos onClick={() => dispatch(agregarAlCarrito(productoDelCarrito[0].id))}>+</ButtonStylos>
-              <ButtonStylos onClick={() => dispatch(sacarItem(productoDelCarrito[0].id))}>-</ButtonStylos>
-              <ButtonStylos onClick={vaciarCarrito}>🗑</ButtonStylos>
-              <TotalStylos>{formatoPrecio(totalPrecio)} Entradas</TotalStylos>
-            </ContadorButtonContainerStylos>
-            <ModalFooter>
-              <ButtonStylos>Realizar compra</ButtonStylos>
-            </ModalFooter>
-          </ContainerCard>
-        </div>
-      );
-    })
-  ) : (
-    <p>no hay productos en tu carrito</p>
-  )}
 </ProductosWrapperStylos>
-      
+<TotalStylos>{formatoPrecio(totalPrecio)} Entradas</TotalStylos>
     </>
   );
 };

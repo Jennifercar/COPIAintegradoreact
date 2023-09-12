@@ -18,7 +18,7 @@ const modalSlice = createSlice({
 return {
 ...state,
 productoDelCarrito: añadirProductoAlCarro(state.productoDelCarrito, action.payload)
-}
+};
   
     },
     sacarItem: (state, action) => {
@@ -32,7 +32,7 @@ productoDelCarrito: añadirProductoAlCarro(state.productoDelCarrito, action.payl
       return {
         ...state,
         productoDelCarrito:[]
-      }
+      };
     },
 
     toggleOculto: (state) => {
