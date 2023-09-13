@@ -46,9 +46,10 @@ export const ModalHeader = styled.h2`
   background-color: #051b28;
 	display:flex;
 	justify-content: center;
+  justify-content: space-around;
 	color: #fff;
 	width: 100%;
-  padding:10px;
+  padding:5px;
 `;
 
 

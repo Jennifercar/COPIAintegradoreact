@@ -5,10 +5,10 @@ import {
     ButtonStylos, 
       ContadorButtonContainerStylos, 
       ContainerCard, 
-      ModalFooter,
+      
       
    } from '../navbarModal/ModalStylos';
- 
+   import { BiSolidTrash } from "react-icons/bi";
   import { formatoPrecio } from '../../../util/formatoPrecio';
 import Contador from '../../../util/contador/Contador';
 
@@ -20,20 +20,18 @@ const dispatch = useDispatch()
 return (
     <ContainerCard>
 
-    <img src={cardImg} alt={name} />
+      <img src={cardImg} alt={name} />
       <h2>{name}</h2>
       <h2>{formatoPrecio(precio)}</h2>
 
-        <ContadorButtonContainerStylos>
+      <ContadorButtonContainerStylos>
         <ButtonStylos onClick={() => dispatch(agregarAlCarrito({cardImg,precio, name, quantity,id }))}>+</ButtonStylos>
           <Contador><h2>{quantity}</h2></Contador>
-          <ButtonStylos onClick={() => dispatch(sacarItem(id))}>-</ButtonStylos>
-          <ButtonStylos onClick={() => dispatch(vaciarCarrito(id))}>🗑</ButtonStylos>
+        <ButtonStylos onClick={() => dispatch(sacarItem(id))}>-</ButtonStylos>
+        <ButtonStylos onClick={() => dispatch(vaciarCarrito(id))}><BiSolidTrash/></ButtonStylos>
           
-        </ContadorButtonContainerStylos>
-        <ModalFooter>
+      </ContadorButtonContainerStylos>
         
-        </ModalFooter>
        
       </ContainerCard>
 );

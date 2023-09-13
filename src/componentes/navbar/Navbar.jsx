@@ -16,6 +16,7 @@ import { ModalContainer,
   ModalContent, 
   ModalHeader,
 } from './navbarModal/ModalStylos'
+import { BiSolidXCircle } from "react-icons/bi";
 
 const Navbar = () => {
 
@@ -28,7 +29,8 @@ const Navbar = () => {
       {cerrarModal &&  <ModalContainer> 
         <ModalContent >
           <ModalHeader> 
-          Carrito de compras
+          Carrito de compras 
+          <BiSolidXCircle onClick={() => dispatch(toggleOculto())}/>
             </ModalHeader>
             <CardModal  />
             </ModalContent>
