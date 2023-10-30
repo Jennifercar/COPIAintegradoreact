@@ -1,22 +1,32 @@
 import React from 'react'
 import { BotonContainerStylos, ContainerCategorias } from './CategoriaStylos'
+import { useDispatch, useSelector } from 'react-redux'
+import { selecionarCategoria } from '../../redux/categoriaSlice/categoriaSlice';
 
 
-const Categorias = () => {
+export const Categorias = ({name,category}) => {
+
+  const dispatch = useDispatch();
+
+  const categoriaSelecionada = useSelector ((state) => state.categorias.categoriaSelecionada)
+
   return (
-    <>
     
-    <ContainerCategorias>
+    
+    <ContainerCategorias 
+    seleccionar={category===categoriaSelecionada}
+    >
         <>
-       <BotonContainerStylos>Todas</BotonContainerStylos> 
-       <BotonContainerStylos>Teatro </BotonContainerStylos>
-       <BotonContainerStylos> Conciertos </BotonContainerStylos>
+       <BotonContainerStylos onClick={() => dispatch(selecionarCategoria(category)) } >
+       <h2>{name}</h2> 
+       </BotonContainerStylos> 
+       
        </>
 
     </ContainerCategorias>
     
-    </>
+   
   )
 }
 
-export default Categorias
+export default Categorias;

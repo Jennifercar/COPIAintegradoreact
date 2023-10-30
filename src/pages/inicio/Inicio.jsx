@@ -1,11 +1,12 @@
 import React from 'react'
-import Categorias from '../../componentes/categorias/Categorias'
+
 import SeccionProductos from '../../componentes/seccionProductos/SeccionProductos'
+import TodasLasCategorias from '../../componentes/categorias/TodasLasCategorias'
 
 const Inicio = () => {
   return (
     <>
-    <Categorias/>
+    <TodasLasCategorias/>
     <h2>Eventos</h2>
     <SeccionProductos/>
     </>
