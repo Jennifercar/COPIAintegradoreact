@@ -1,6 +1,6 @@
 import React from 'react';
 import {useSelector } from 'react-redux';
-import { ProductosWrapperStylos,TotalStylos} from './ModalStylos';
+import { ButtonStylos, ProductosWrapperStylos,TotalStylos} from './ModalStylos';
 import { formatoPrecio } from '../../../util/formatoPrecio';
 import ModalCont from '../../navbar/navbarModal/ModalCont';
 
@@ -14,7 +14,7 @@ const CardModal = () => {
         return (acc += item.precio * item.quantity)
       }, 0)
     
-
+      
   return (
     <>
     
@@ -27,6 +27,7 @@ const CardModal = () => {
 
 </ProductosWrapperStylos>
 <TotalStylos>{formatoPrecio(totalPrecio)} Entradas</TotalStylos>
+<ButtonStylos>comprar</ButtonStylos>
     </>
   );
 };

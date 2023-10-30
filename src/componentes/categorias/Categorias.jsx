@@ -14,7 +14,7 @@ export const Categorias = ({name,category}) => {
     
     
     <ContainerCategorias 
-    seleccionar={category===categoriaSelecionada}
+    seleccionar={category===categoriaSelecionada ? 'true' : 'true'}
     >
         <>
        <BotonContainerStylos onClick={() => dispatch(selecionarCategoria(category)) } >

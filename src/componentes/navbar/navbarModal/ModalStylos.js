@@ -7,7 +7,6 @@ export const ProductosWrapperStylos = styled.div`
   align-items: center;
   gap: 30px;
   width: 100%;
-  
   margin: 0 auto;
   padding: 1rem;
   padding-left: 0;
@@ -17,16 +16,13 @@ export const ProductosWrapperStylos = styled.div`
 
 export const ModalContainer = styled.div`
   width: 80%;
-	
-	color: antiquewhite;
-	box-shadow: 0 4px 30px rgb(0 0 0 / 60%);
-    backdrop-filter: blur(29.400000000000006px);
+  backdrop-filter: blur(29.400000000000006px);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	position:absolute;
 	z-index: 9;
-    top:12vh ;
+  top:12vh ;
 `;
 
 export const ModalContent = styled.div`
@@ -75,16 +71,18 @@ export const TotalStylos = styled.span`
 `;
 
 export const ButtonStylos = styled.button`
-  background-color: #007bff;
+  background-color: #0056b3;
   color: #fff;
   border: none;
   padding: 10px 15px;
   border-radius: 4px;
   cursor: pointer;
   margin-left: 10px;
+  font-size: 20px;
 
   &:hover {
-    background-color: #0056b3;
+    background-color: #051b20;
+    
   }
 `;
 

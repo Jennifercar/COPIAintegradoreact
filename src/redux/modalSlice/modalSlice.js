@@ -7,7 +7,7 @@ import {
 const INITIAL_STATE = {
   menuOculto: true,
   productoDelCarrito: [],
-}
+};
 
 const modalSlice = createSlice({
   name: 'modal',
@@ -15,17 +15,19 @@ const modalSlice = createSlice({
   reducers: {
 
     agregarAlCarrito: (state, action) => {
-return {
+      return {
 ...state,
 productoDelCarrito: añadirProductoAlCarro(state.productoDelCarrito, action.payload)
 };
-  
+
     },
     sacarItem: (state, action) => {
       return {
         ...state,
         productoDelCarrito: sacarProductoDelCart(state.productoDelCarrito, action.payload),
       }; 
+      
+
     },
 
     vaciarCarrito: (state) => {
@@ -33,6 +35,7 @@ productoDelCarrito: añadirProductoAlCarro(state.productoDelCarrito, action.payl
         ...state,
         productoDelCarrito:[]
       };
+      
     },
 
     toggleOculto: (state) => {
@@ -41,6 +44,7 @@ productoDelCarrito: añadirProductoAlCarro(state.productoDelCarrito, action.payl
         menuOculto: !state.menuOculto
 
       }
+     
     }
   },
 });
