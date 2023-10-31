@@ -1,10 +1,13 @@
 import React from 'react';
-import {useSelector } from 'react-redux';
+import {useDispatch, useSelector } from 'react-redux';
 import { ButtonStylos, ProductosWrapperStylos,TotalStylos} from './ModalStylos';
 import { formatoPrecio } from '../../../util/formatoPrecio';
 import ModalCont from '../../navbar/navbarModal/ModalCont';
+import { vaciarCarrito } from '../../../redux/modalSlice/modalSlice';
 
 const CardModal = () => {
+
+  const dispatch = useDispatch();
  
   const {productoDelCarrito}= useSelector(state => state.modal);
 
@@ -26,8 +29,21 @@ const CardModal = () => {
         }
 
 </ProductosWrapperStylos>
+{productoDelCarrito.length > 0 && (
 <TotalStylos>{formatoPrecio(totalPrecio)} Entradas</TotalStylos>
+)}
+
+
+{productoDelCarrito.length > 0 && (
+
+  <ButtonStylos onClick={() => dispatch(vaciarCarrito())}>vaciar carrito</ButtonStylos>
+
+  )}
+
+{productoDelCarrito.length > 0 && (
 <ButtonStylos>comprar</ButtonStylos>
+)}
+
     </>
   );
 };

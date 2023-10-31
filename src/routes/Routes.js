@@ -1,6 +1,6 @@
 import { Route, Routes as ReactDomRoutes } from 'react-router-dom'
 import Inicio from '../pages/inicio/Inicio'
-import  Login  from '../pages/login/Login'
+import Nosotros from '../pages/nosotros/Nosotros'
 
 
 const Routes = () => {
@@ -10,7 +10,7 @@ const Routes = () => {
 <ReactDomRoutes>
 
 <Route path="/" element={<Inicio />} />
-<Route path="/login" element={<Login />} />
+<Route path="/nosotros" element={<Nosotros />} />
 
 </ReactDomRoutes>
    

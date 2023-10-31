@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import {  agregarAlCarrito, sacarItem, vaciarCarrito } from '../../../redux/modalSlice/modalSlice';
+import {  agregarAlCarrito, sacarItem ,borrarLosProductos } from '../../../redux/modalSlice/modalSlice';
 import { ButtonStylos, 
          ContadorButtonContainerStylos, 
     ContainerCard, } from '../navbarModal/ModalStylos';
@@ -26,7 +26,7 @@ return (
           <Contador><h2>{quantity}</h2></Contador>
         <ButtonStylos onClick={() => dispatch(agregarAlCarrito({cardImg,precio, name, quantity,id }))}>+</ButtonStylos>
         
-        <ButtonStylos onClick={() => dispatch(vaciarCarrito(id))}><BiSolidTrash/></ButtonStylos>
+        <ButtonStylos onClick={() => dispatch(borrarLosProductos(id))}><BiSolidTrash/></ButtonStylos>
           
       </ContadorButtonContainerStylos>
         

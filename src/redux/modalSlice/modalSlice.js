@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import {
   añadirProductoAlCarro,
+  SacarTodosLosProductos,
   sacarProductoDelCart,
 }  from './modalUtils';
 
@@ -30,6 +31,13 @@ productoDelCarrito: añadirProductoAlCarro(state.productoDelCarrito, action.payl
 
     },
 
+    borrarLosProductos: (state,action) => {
+      return{ 
+        ...state,
+        productoDelCarrito: SacarTodosLosProductos(state.productoDelCarrito, action.payload),
+    };
+  },
+
     vaciarCarrito: (state) => {
       return {
         ...state,
@@ -49,6 +57,6 @@ productoDelCarrito: añadirProductoAlCarro(state.productoDelCarrito, action.payl
   },
 });
 
-export const { agregarAlCarrito, sacarItem, vaciarCarrito, toggleOculto } = modalSlice.actions;
+export const { agregarAlCarrito, sacarItem,borrarLosProductos, vaciarCarrito, toggleOculto } = modalSlice.actions;
 
 export default modalSlice.reducer;

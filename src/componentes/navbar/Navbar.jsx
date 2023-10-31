@@ -41,7 +41,7 @@ const Navbar = () => {
       </LinckStylos>
       <ContainerLinckStylos>
         <LinckStylos to="/">Inicio</LinckStylos>
-        <LinckStylos to="/login">Login</LinckStylos>
+        <LinckStylos to="/nosotros">Quienes somos?</LinckStylos>
         <BsCartFill onClick={() => dispatch(toggleOculto())}  />
       </ContainerLinckStylos>
       <MenuStylos onClick={() => dispatch(toggleOculto())} > <BiMenu />
@@ -49,7 +49,7 @@ const Navbar = () => {
       {cerrarModal && (
         <ul>
           <li>Inicio</li>
-          <li>Login</li>
+          <li>Quienes somos?</li>
           <li><BsCartFill onClick={() => dispatch(toggleOculto())}/></li>
         </ul>
       )}
