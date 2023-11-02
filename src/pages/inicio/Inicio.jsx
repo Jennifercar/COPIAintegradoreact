@@ -1,5 +1,5 @@
 import React from 'react'
-import videoInicio from '../../componentes/assets/videoInicio.mp4'
+import gifInicio from '../../componentes/assets/gifInicio.gif'
 import { ButtonConteinerStylos, InicioContainerStylos, InicioStylos, ReservaAquiButton } from './InicioStylos'
 
 const Inicio = () => {
@@ -9,7 +9,7 @@ const Inicio = () => {
     <>
     <InicioContainerStylos>
       
-        <video  src={videoInicio} autoPlay loop muted />
+        <img  src={gifInicio} />
        
     <InicioStylos>
         <h1>¡Sumérgete en el Mundo de la Música y el Teatro en Vivo!</h1>
