@@ -10,12 +10,13 @@ export const productsData = [
     },
     {
       id: 2,
-      name: "Camilo",
-      date: "16 de marzo",
-      category: "Conciertos",  
-      cardImg: "/img/imgProductos/Camilo.jpg",
-      precio: 7500,
+      name: "Connie Ballarini",
+      date: "14 de febrero",
+      category: "Teatro",
+      cardImg: "/img/imgProductos/connie.jpg",
+      precio: 3000,
       quantity:1,
+      
     },
     {
       id: 3,
@@ -28,12 +29,13 @@ export const productsData = [
     },
     {
       id: 4,
-      name: "Alejandro Sanz",
-      date: "21 de enero",
-      category: "Conciertos",  
-      cardImg: "/img/imgProductos/Sanz.jpg",
-      precio: 8000,
+      name: "Convivencia obligada",
+      date: "26 de Marzo",
+      category: "Teatro",
+      cardImg: "/img/imgProductos/convivencia-obligada.jpg",
+      precio: 3000,
       quantity:1,
+      
     },
     {
       id: 5,
@@ -46,11 +48,11 @@ export const productsData = [
     },
     {
       id: 6,
-      name: "Connie Ballarini",
-      date: "14 de febrero",
-      category: "Teatro",
-      cardImg: "/img/imgProductos/connie.jpg",
-      precio: 3000,
+      name: "Camilo",
+      date: "16 de marzo",
+      category: "Conciertos",  
+      cardImg: "/img/imgProductos/Camilo.jpg",
+      precio: 7500,
       quantity:1,
     },
     {
@@ -101,11 +103,11 @@ export const productsData = [
     },
     {
       id: 12,
-      name: "Convivencia obligada",
-      date: "26 de Marzo",
-      category: "Teatro",
-      cardImg: "/img/imgProductos/convivencia-obligada.jpg",
-      precio: 3000,
+      name: "Alejandro Sanz",
+      date: "21 de enero",
+      category: "Conciertos",  
+      cardImg: "/img/imgProductos/Sanz.jpg",
+      precio: 8000,
       quantity:1,
     },
     {
