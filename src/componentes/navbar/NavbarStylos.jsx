@@ -16,7 +16,7 @@ export const Navbarcontainerstylos = styled.header `
 	img{
     width: 210px;
     height:210px;
-		margin-left: 50px;
+	
     border-radius: 50%;
 
   }
@@ -28,6 +28,7 @@ export const Navbarcontainerstylos = styled.header `
   }
 }
 `;
+
 
 export const LinckStylos= styled(NavLink) `
 list-style:none;

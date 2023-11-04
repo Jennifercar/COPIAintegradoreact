@@ -13,6 +13,8 @@ img{
     
 }
 `;
+
+
 export const InicioStylos = styled.div `
 position:absolute;
 width:100%;
@@ -43,6 +45,22 @@ p{
 
 `
 export const ReservaAquiButton = styled(NavLink)`
+  background-color: rgba(0, 0, 0, 0.5); 
+  color: #4283ac; 
+  border: none;
+  
+  font-size: 1.5rem;
+  margin: 5px 50px 10px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease; 
+
+  &:hover {
+    color:  rgb(106, 106, 207); 
+  }
+`;
+
+export const PreguntasButton = styled.button`
   background-color: rgba(0, 0, 0, 0.5); 
   color: #4283ac; 
   border: none;

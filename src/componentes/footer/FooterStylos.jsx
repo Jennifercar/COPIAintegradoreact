@@ -24,12 +24,18 @@ export const ContainerContactoStylos = styled.div `
 	flex-direction: column;
     font-size:30px;
 
+
+    @media (max-width: 320px) {
+    font-size: 20px; 
+  }
     
 `;
 
 export const ContactoStylos = styled.div `
 	font-size:27px;
-    
+
+    @media (max-width: 320px) {
+    font-size: 20px; }
 `;
 export const RedesContainerSocialeStylos = styled.div `
 display:flex;

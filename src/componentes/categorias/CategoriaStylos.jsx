@@ -2,12 +2,13 @@ import styled from "styled-components";
 
 export const ContainerCategorias = styled.div `
     width: 100%;
-    height:fit-content;
+	height: fit-content;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	background-image: url(/img/f9a98ff98167367f51f30db94eb85514.jpg);
     padding-top:20px;
+	text-align: center;
     @media (max-width: 1099px) {
 		flex-direction:column
 	}
