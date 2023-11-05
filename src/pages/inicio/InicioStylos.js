@@ -28,19 +28,32 @@ color:white;
 background-color: rgba(0, 0, 0, 0.8); 
 
 h1{
-    font-size: 3rem;
+    font-size: 3vw;
     margin: 5px 50px 10px;
+
+   
+    @media (max-width: 1000px){
+      font-size: 6vw;
+    }
+  
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 2vw;
     margin: 5px 50px 10px;
+
+    @media (max-width: 1000px){
+      font-size: 5vw;
+    }
   }
 
 p{
-    font-size: 1.5rem;
+    font-size: 1 vw;
     max-width: 600px;
     margin: 5px 50px 10px;
+    @media (max-width: 1000px){
+      font-size: 3vw;
+    }
   }
 
 `
@@ -60,24 +73,5 @@ export const ReservaAquiButton = styled(NavLink)`
   }
 `;
 
-export const PreguntasButton = styled.button`
-  background-color: rgba(0, 0, 0, 0.5); 
-  color: #4283ac; 
-  border: none;
-  padding: 10px 30px;
-  font-size: 1.5rem;
-  margin: 5px 50px 10px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background-color 0.3s ease; 
 
-  &:hover {
-    color:  rgb(106, 106, 207); 
-  }
-`;
 
-export const ButtonConteinerStylos = styled.div `
-display: flex;
-justify-content: center;
-align-items: center;
-`

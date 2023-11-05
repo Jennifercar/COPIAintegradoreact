@@ -1,8 +1,19 @@
+import {Formik} from 'formik';
 import React from 'react'
 import gifInicio from '../../componentes/assets/gifInicio.gif'
+import { InicioContainerStylos, InicioStylos, ReservaAquiButton } from './InicioStylos'
+import { ContactoStylos, 
+  ContactosContainerStylos, 
+  FormButton, 
+  FormContainer, 
+  FormStylos, 
+  ParrafoContactos,
+  TituloForm } from './contactoStylos'
+import FormInput from '../inicio/FormInput';
+import { initialValues } from '../../formik/initialValues';
+import { validentionSchema } from '../../formik/esquemaValidacion';
 
-import { ButtonConteinerStylos, InicioContainerStylos, InicioStylos, ReservaAquiButton } from './InicioStylos'
-import { ContactoStylos, ContactosContainerStylos, FormContainer, ParrafoContactos, SubtituloForm, TituloForm } from './contactoStylos'
+
 
 const Inicio = () => {
 
@@ -10,40 +21,61 @@ const Inicio = () => {
   return (
     <>
     <InicioContainerStylos>
-      
-        <img  src={gifInicio} alt= "gifRecital"/>
-       
+        <img  src={gifInicio} alt= "gifRecital"/> 
     <InicioStylos>
         <h1>¡Sumérgete en el Mundo de la Música y el Teatro en Vivo!</h1>
         <h2>Descubre Experiencias Únicas con los Mejores Artistas.</h2>
         <p>Busca a tu Artista Favorito o Encuentra a los Mejores Talentos en Nuestro Escenario.
          Encuentra aquí las Entradas que Deseas y Compra con Seguridad.</p>
         
-    <ButtonConteinerStylos>
-<ReservaAquiButton to="/paginaDeProductos"> Envía tus Preguntas</ReservaAquiButton>
-<ReservaAquiButton to="/paginaDeProductos"> Reservá Ahora </ReservaAquiButton>
-
-    </ButtonConteinerStylos>
-
+    <ReservaAquiButton to="/paginaDeProductos"> Reservá Ahora </ReservaAquiButton>
     </InicioStylos>
-        
-     </InicioContainerStylos>
+    </InicioContainerStylos>
     
-    <ContactosContainerStylos>
 
-    <FormContainer>
+
+<ContactosContainerStylos>
+ <FormContainer>
    <TituloForm>Contactenos</TituloForm>
-   <SubtituloForm>Este es un formulario de ejemplo</SubtituloForm>
- </FormContainer>
 
-    <ContactoStylos> 
-      <ParrafoContactos>"Le invitamos a utilizar nuestro formulario de contacto para aclarar sus dudas, 
+   <Formik
+   initialValues={initialValues}
+   validationSchema={validentionSchema}
+   onSubmit={(values,resetForm) => {
+    console.log(values);
+    resetForm();
+  }
+   }
+    
+   >
+     <FormStylos>
+       <FormInput
+         name="name"
+         label="Nombre"
+         type="text"
+       />
+       <FormInput
+         name="email"
+         label="Email"
+         type="text"
+       />
+       <FormInput
+         name="mensaje"
+         label="Mensaje"
+         type="text"
+       />
+     </FormStylos>
+
+
+     </Formik>
+     <FormButton>Enviar</FormButton>
+     </FormContainer>
+  <ContactoStylos> 
+      <ParrafoContactos>"Te invitamos a utilizar nuestro formulario de contacto para aclarar sus dudas, 
         asegurarse de no perderse ningún evento y adquirir las mejores entradas. 
         Estamos aquí para hacer que sus noches sean especiales."</ParrafoContactos>
-      </ContactoStylos>
-   
-
-    </ContactosContainerStylos>
+   </ContactoStylos>
+   </ContactosContainerStylos>
     
     </>
   )
