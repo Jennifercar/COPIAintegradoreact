@@ -11,16 +11,18 @@ import { BsCartFill } from 'react-icons/bs';
 import { BiMenu } from 'react-icons/bi';
 import CardModal from './navbarModal/CardModal';
 import { useDispatch, useSelector } from 'react-redux';
-import {toggleOculto} from '../../redux/modalSlice/modalSlice';
+import {toggleMenu} from '../../redux/modalSlice/modalSlice';
 import { ModalContainer, 
   ModalContent, 
   ModalHeader,
 } from './navbarModal/ModalStylos'
 import { BiSolidXCircle } from "react-icons/bi";
+import { abrirMenu } from '../../redux/menuHamburSlice/menuHamburSlice';
 
 const Navbar = () => {
 
   const cerrarModal = useSelector(state =>state.modal.menuOculto)
+  const menuHam = useSelector(state =>state.menu.menuHamburguesa)
   const dispatch = useDispatch();
 
 
@@ -30,7 +32,7 @@ const Navbar = () => {
         <ModalContent >
           <ModalHeader> 
           Carrito de compras 
-          <BiSolidXCircle onClick={() => dispatch(toggleOculto())}/>
+          <BiSolidXCircle onClick={() => dispatch(toggleMenu())}/>
             </ModalHeader>
             <CardModal  />
             </ModalContent>
@@ -43,15 +45,19 @@ const Navbar = () => {
         <LinckStylos to="/">Inicio</LinckStylos>
         <LinckStylos to="/nosotros">Quienes somos?</LinckStylos>
         <LinckStylos to="/paginaDeProductos">Tu Ticket</LinckStylos>
-        <BsCartFill onClick={() => dispatch(toggleOculto())}  />
+        <BsCartFill onClick={() => dispatch(toggleMenu())}  />
+        {menuHam && (
+          <MenuStylos onClick={() => dispatch(abrirMenu())}> <BiMenu /> </MenuStylos>
+        )}
       </ContainerLinckStylos>
-      <MenuStylos onClick={() => dispatch(toggleOculto())} > <BiMenu />
+      <MenuStylos onClick={() => dispatch(abrirMenu())} > <BiMenu />
       </MenuStylos>
-      {cerrarModal && (
+      {menuHam && (
         <ul>
-          <li>Inicio</li>
-          <li>Quienes somos?</li>
-          <li><BsCartFill onClick={() => dispatch(toggleOculto())}/></li>
+          <li><LinckStylos to="/">Inicio</LinckStylos></li>
+          <li><LinckStylos to="/nosotros">Quienes somos?</LinckStylos></li>
+          <li><LinckStylos to="/paginaDeProductos">Tu Ticket</LinckStylos></li>
+          <li><BsCartFill onClick={() => dispatch(toggleMenu())}/></li>
         </ul>
       )}
     </Navbarcontainerstylos>

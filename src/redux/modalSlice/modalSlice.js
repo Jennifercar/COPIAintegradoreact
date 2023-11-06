@@ -46,7 +46,7 @@ productoDelCarrito: añadirProductoAlCarro(state.productoDelCarrito, action.payl
       
     },
 
-    toggleOculto: (state) => {
+    toggleMenu: (state) => {
       return {
         ...state,
         menuOculto: !state.menuOculto
@@ -57,6 +57,6 @@ productoDelCarrito: añadirProductoAlCarro(state.productoDelCarrito, action.payl
   },
 });
 
-export const { agregarAlCarrito, sacarItem,borrarLosProductos, vaciarCarrito, toggleOculto } = modalSlice.actions;
+export const { agregarAlCarrito, sacarItem,borrarLosProductos, vaciarCarrito, toggleMenu } = modalSlice.actions;
 
 export default modalSlice.reducer;

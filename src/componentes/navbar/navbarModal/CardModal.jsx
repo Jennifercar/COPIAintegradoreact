@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {useDispatch, useSelector } from 'react-redux';
 import { ButtonStylos, ProductosWrapperStylos,TotalStylos} from './ModalStylos';
 import { formatoPrecio } from '../../../util/formatoPrecio';
@@ -11,13 +11,17 @@ const CardModal = () => {
  
   const {productoDelCarrito}= useSelector(state => state.modal);
 
+  const [compraExitosa, setCompraExitosa] = useState(false);
  
 
   const totalPrecio = productoDelCarrito.reduce((acc, item) => {
         return (acc += item.precio * item.quantity)
       }, 0)
     
-      
+  const manejarCompra = () => {
+        setCompraExitosa(true);
+        dispatch(vaciarCarrito());
+      };   
   return (
     <>
     
@@ -41,8 +45,13 @@ const CardModal = () => {
   )}
 
 {productoDelCarrito.length > 0 && (
-<ButtonStylos>comprar</ButtonStylos>
+<ButtonStylos onClick={manejarCompra}>comprar</ButtonStylos>
 )}
+{compraExitosa && (
+        <p style={{ color: 'green', fontSize: '1.5rem' }}>
+          ¡Su compra ha sido exitosa! 
+        </p>
+      )}
 
     </>
   );
