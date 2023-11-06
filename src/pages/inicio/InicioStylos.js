@@ -1,6 +1,8 @@
 import { NavLink } from "react-router-dom";
 import styled from 'styled-components';
 
+
+
 export const InicioContainerStylos = styled.div `
 width: 100%;
 height:75vh;

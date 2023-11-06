@@ -4,14 +4,15 @@ import gifInicio from '../../componentes/assets/gifInicio.gif'
 import { InicioContainerStylos, InicioStylos, ReservaAquiButton } from './InicioStylos'
 import { ContactoStylos, 
   ContactosContainerStylos, 
-  FormButton, 
   FormContainer, 
   FormStylos, 
   ParrafoContactos,
   TituloForm } from './contactoStylos'
 import FormInput from '../inicio/FormInput';
+import BotonSubmit from '../inicio/BotonSubmit';
 import { initialValues } from '../../formik/initialValues';
 import { validentionSchema } from '../../formik/esquemaValidacion';
+
 
 
 
@@ -64,11 +65,12 @@ const Inicio = () => {
          label="Mensaje"
          type="text"
        />
+       <BotonSubmit>Enviar</BotonSubmit>
      </FormStylos>
 
 
      </Formik>
-     <FormButton>Enviar</FormButton>
+     
      </FormContainer>
   <ContactoStylos> 
       <ParrafoContactos>"Te invitamos a utilizar nuestro formulario de contacto para aclarar sus dudas, 
