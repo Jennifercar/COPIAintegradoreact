@@ -88,12 +88,17 @@ export const ButtonStylos = styled.button`
 
 export const ContainerCard = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 15px;
   padding:10px;
   background-color: #2323234e;
+
+  @media (max-width: 960px){
+    align-items: center;
+    gap: 25px;
+    }
 
 
   & img {
