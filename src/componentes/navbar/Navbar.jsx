@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   ContainerLinckStylos,
   MenuStylos,
@@ -25,6 +25,15 @@ const Navbar = () => {
   const menuHam = useSelector(state =>state.menu.menuHamburguesa)
   const dispatch = useDispatch();
 
+  const [mostrarIconoMenu, setMostrarIconoMenu] = useState(true);
+
+  const manejarIconoMenu = () => {
+    setMostrarIconoMenu(false); 
+    dispatch(abrirMenu()); 
+  };
+ 
+  
+
 
   return (
     <Navbarcontainerstylos>
@@ -32,12 +41,13 @@ const Navbar = () => {
         <ModalContent >
           <ModalHeader> 
           Carrito de compras 
-          <BiSolidXCircle onClick={() => dispatch(toggleMenu())}/>
+          <BiSolidXCircle onClick={() => dispatch(toggleMenu())} />
             </ModalHeader>
             <CardModal  />
             </ModalContent>
             
             </ModalContainer>}
+            
       <LinckStylos to="/">
         <img src={logo} alt="logo" />
       </LinckStylos>
@@ -46,19 +56,19 @@ const Navbar = () => {
         <LinckStylos to="/nosotros">Quienes somos?</LinckStylos>
         <LinckStylos to="/paginaDeProductos">Tu Ticket</LinckStylos>
         <BsCartFill onClick={() => dispatch(toggleMenu())}  />
-        {menuHam && (
-          <MenuStylos onClick={() => dispatch(abrirMenu())}> <BiMenu /> </MenuStylos>
-        )}
-      </ContainerLinckStylos>
-      <MenuStylos onClick={() => dispatch(abrirMenu())} > <BiMenu />
-      </MenuStylos>
-      {menuHam && (
-        <ul>
+     
+   
+     </ContainerLinckStylos>
+     {menuHam && (
+          <ul>
           <li><LinckStylos to="/">Inicio</LinckStylos></li>
           <li><LinckStylos to="/nosotros">Quienes somos?</LinckStylos></li>
           <li><LinckStylos to="/paginaDeProductos">Tu Ticket</LinckStylos></li>
           <li><BsCartFill onClick={() => dispatch(toggleMenu())}/></li>
         </ul>
+        )}
+      {mostrarIconoMenu && (
+        <MenuStylos onClick={manejarIconoMenu}> <BiMenu /> </MenuStylos>
       )}
     </Navbarcontainerstylos>
   );
