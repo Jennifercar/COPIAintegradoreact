@@ -28,11 +28,18 @@ const Navbar = () => {
   const [mostrarIconoMenu, setMostrarIconoMenu] = useState(true);
 
   const manejarIconoMenu = () => {
-    setMostrarIconoMenu(false); 
+    setMostrarIconoMenu(true); 
     dispatch(abrirMenu()); 
   };
  
-  
+  const cerrarMenuHam =() => {
+    dispatch(abrirMenu());
+  };
+
+  const manejarClickCarrito =() => {
+    cerrarMenuHam();
+    dispatch(toggleMenu())
+  }
 
 
   return (
@@ -61,14 +68,14 @@ const Navbar = () => {
      </ContainerLinckStylos>
      {menuHam && (
           <ul>
-          <li><LinckStylos to="/">Inicio</LinckStylos></li>
-          <li><LinckStylos to="/nosotros">Quienes somos?</LinckStylos></li>
-          <li><LinckStylos to="/paginaDeProductos">Tu Ticket</LinckStylos></li>
-          <li><BsCartFill onClick={() => dispatch(toggleMenu())}/></li>
+          <li><LinckStylos to="/" onClick={cerrarMenuHam}>Inicio</LinckStylos></li>
+          <li><LinckStylos to="/nosotros" onClick={cerrarMenuHam}>Quienes somos?</LinckStylos></li>
+          <li><LinckStylos to="/paginaDeProductos" onClick={cerrarMenuHam}>Tu Ticket</LinckStylos></li>
+          <li><BsCartFill onClick={manejarClickCarrito}/></li>
         </ul>
         )}
       {mostrarIconoMenu && (
-        <MenuStylos onClick={manejarIconoMenu}> <BiMenu /> </MenuStylos>
+        <MenuStylos onClick={manejarIconoMenu} > <BiMenu /> </MenuStylos>
       )}
     </Navbarcontainerstylos>
   );

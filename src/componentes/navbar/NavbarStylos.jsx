@@ -29,10 +29,11 @@ export const Navbarcontainerstylos = styled.header `
   }
   ul{
     
-        
+        width:90%;
+        height:20%;
         display: flex;
         flex-direction: column;
-        align-items: end;
+        align-items: center;
         gap: 1rem;
         position: absolute;
         top: 0;
@@ -40,7 +41,7 @@ export const Navbarcontainerstylos = styled.header `
         bottom: 0;
         background-color: #1c1c1c;
         padding: 2rem;
-        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+        
   }
 }
 `;
