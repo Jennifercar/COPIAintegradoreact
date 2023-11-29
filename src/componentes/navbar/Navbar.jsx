@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   ContainerLinckStylos,
   MenuStylos,
@@ -25,12 +25,7 @@ const Navbar = () => {
   const menuHam = useSelector(state =>state.menu.menuHamburguesa)
   const dispatch = useDispatch();
 
-  const [mostrarIconoMenu, setMostrarIconoMenu] = useState(true);
-
-  const manejarIconoMenu = () => {
-    setMostrarIconoMenu(true); 
-    dispatch(abrirMenu()); 
-  };
+  
  
   const cerrarMenuHam =() => {
     dispatch(abrirMenu());
@@ -74,9 +69,9 @@ const Navbar = () => {
           <li><BsCartFill onClick={manejarClickCarrito}/></li>
         </ul>
         )}
-      {mostrarIconoMenu && (
-        <MenuStylos onClick={manejarIconoMenu} > <BiMenu /> </MenuStylos>
-      )}
+     
+        <MenuStylos  onClick={() => dispatch(abrirMenu())} > <BiMenu /> </MenuStylos>
+      
     </Navbarcontainerstylos>
   );
 };

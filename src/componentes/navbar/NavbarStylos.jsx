@@ -6,7 +6,7 @@ export const Navbarcontainerstylos = styled.header `
   color: #ffffff;
 	display: flex;
 	justify-content: space-between;
-  padding: 2rem;
+  border:25px;
 	align-items: center;
 	height: fit-content;
 
@@ -32,6 +32,7 @@ export const Navbarcontainerstylos = styled.header `
         width:90%;
         height:20%;
         display: flex;
+        justify-content:center;
         flex-direction: column;
         align-items: center;
         gap: 1rem;
@@ -40,7 +41,7 @@ export const Navbarcontainerstylos = styled.header `
         right: 0;
         bottom: 0;
         background-color: #1c1c1c;
-        padding: 2rem;
+        
         
   }
 }
@@ -52,6 +53,7 @@ list-style:none;
 text-decoration:none;
 color: white;
 font-size: 20px;
+padding-left: 6px;
 
 
 `
@@ -64,6 +66,7 @@ export const ContainerLinckStylos= styled.div `
   gap: 45px;
   font-size: 22px;
   cursor: pointer;
+  padding-right: 34px;
 
   h2{
     font-size:22px;
@@ -80,6 +83,7 @@ export const MenuStylos = styled.div`
   display: none;
 	cursor: pointer;
 	font-size: 40px;
+  padding-right: 25px;
   
   
   
