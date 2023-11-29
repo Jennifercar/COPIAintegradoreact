@@ -29,8 +29,8 @@ export const Navbarcontainerstylos = styled.header `
   }
   ul{
     
-        width:90%;
-        height:20%;
+        width:100%;
+        position:absolute;
         display: flex;
         justify-content:center;
         flex-direction: column;
@@ -40,10 +40,12 @@ export const Navbarcontainerstylos = styled.header `
         top: 0;
         right: 0;
         bottom: 0;
-        background-color: #1c1c1c;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index:2;
         
         
   }
+  
 }
 `;
 
@@ -54,8 +56,14 @@ text-decoration:none;
 color: white;
 font-size: 20px;
 padding-left: 6px;
+&:hover {
+    color: #5656e6; }
 
-
+    @media (max-width: 1099px) {
+      font-size: 30px;
+      display:flex;
+      justify-content:center;
+     }
 `
 
 export const ContainerLinckStylos= styled.div `

@@ -66,7 +66,7 @@ const Navbar = () => {
           <li><LinckStylos to="/" onClick={cerrarMenuHam}>Inicio</LinckStylos></li>
           <li><LinckStylos to="/nosotros" onClick={cerrarMenuHam}>Quienes somos?</LinckStylos></li>
           <li><LinckStylos to="/paginaDeProductos" onClick={cerrarMenuHam}>Tu Ticket</LinckStylos></li>
-          <li><BsCartFill onClick={manejarClickCarrito}/></li>
+          <li><LinckStylos><BsCartFill onClick={manejarClickCarrito}/></LinckStylos></li>
         </ul>
         )}
      

@@ -50,7 +50,7 @@ display: flex;
 flex-direction: column;
 justify-content:center;
 align-items: flex-start;
-margin-left: 35px;
+
 background-color: black;
 color:white;
 @media (max-width: 1000px){
