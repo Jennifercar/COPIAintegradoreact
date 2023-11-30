@@ -101,6 +101,3 @@ export const MenuStylos = styled.div`
   }
 `;
 
-export const ModalCont = styled.div`
-  
-`;

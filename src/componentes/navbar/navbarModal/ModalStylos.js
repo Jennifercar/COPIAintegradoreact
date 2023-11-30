@@ -8,16 +8,15 @@ export const ProductosWrapperStylos = styled.div`
   flex-direction:column;
   gap: 35px;
   margin: 0 auto;
-  padding-left: 0;
   width: 90%;
 
   
 `;
 
 export const ModalContainer = styled.div`
-width:100%;
+display: flex;
+width:95%;
   backdrop-filter: blur(29.400000000000006px);
-	display: flex;
   justify-content: center;
 	flex-direction: column;
 	align-items: center;
