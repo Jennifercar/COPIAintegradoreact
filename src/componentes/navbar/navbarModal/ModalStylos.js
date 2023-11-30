@@ -3,26 +3,32 @@ import styled from 'styled-components';
 
 export const ProductosWrapperStylos = styled.div`
   display: flex;
-  flex-direction: column;
+  justify-content:center;
   align-items: center;
-  gap: 30px;
-  width: 100%;
+  flex-direction:column;
+  gap: 35px;
   margin: 0 auto;
-  padding: 1rem;
   padding-left: 0;
+  width: 90%;
 
   
 `;
 
 export const ModalContainer = styled.div`
-  width: 80%;
+width:100%;
   backdrop-filter: blur(29.400000000000006px);
 	display: flex;
+  justify-content: center;
 	flex-direction: column;
 	align-items: center;
 	position:absolute;
 	z-index: 9;
   top:12vh ;
+  padding:5px;
+
+  @media (max-width: 800px){
+ gap:5px;
+    }
 `;
 
 export const ModalContent = styled.div`
@@ -32,8 +38,6 @@ width: 95%;
 	justify-content:center;
   flex-direction:column;
 	gap: 30px;
-	
-	padding: 20px;
 	border-radius: 10px;
 	
 `;
@@ -41,11 +45,10 @@ width: 95%;
 export const ModalHeader = styled.h2`
   background-color: #051b28;
 	display:flex;
-	justify-content: center;
   justify-content: space-around;
 	color: #fff;
 	width: 100%;
-  padding:5px;
+  
 `;
 
 
@@ -63,7 +66,7 @@ export const ContadorButtonContainerStylos = styled.div`
 `;
 
 export const TotalStylos = styled.span`
-  padding: 10px;
+ 
   min-width: 100px;
   width: auto;
   font-size: 30px;
@@ -87,22 +90,24 @@ export const ButtonStylos = styled.button`
 `;
 
 export const ContainerCard = styled.div`
+width:100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 15px;
+  gap: 25px;
   padding:10px;
   background-color: #2323234e;
 
-  @media (max-width: 960px){
+  @media (max-width: 800px){
+    flex-direction:column;
     align-items: center;
-    gap: 25px;
+   gap:2px;
+
     }
 
 
   & img {
-    width: 150px;
+    width: 100%;
     height: 150px;
     border-radius: 5px;
     object-fit: cover;

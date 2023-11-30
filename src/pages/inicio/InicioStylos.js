@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 
 export const InicioContainerStylos = styled.div `
+
 width: 100%;
 height:75vh;
 position: relative;

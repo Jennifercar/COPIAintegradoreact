@@ -3,12 +3,11 @@ import styled from 'styled-components';
 
 export const NosotrosContainerStylos = styled.div `
 width: 100%;
-
 display:flex;
 justify-content:center;
 align-items: center;
 background: #0b2739;
-	
+
 
   img{
     width:50vh;

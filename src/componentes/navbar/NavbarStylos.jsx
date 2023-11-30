@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components"; 
 
 export const Navbarcontainerstylos = styled.header `
+
   background-color: #000000;
   color: #ffffff;
 	display: flex;
@@ -9,6 +10,7 @@ export const Navbarcontainerstylos = styled.header `
   border:25px;
 	align-items: center;
 	height: fit-content;
+  
 
  li{
   list-style-type: none;
@@ -42,13 +44,11 @@ export const Navbarcontainerstylos = styled.header `
         bottom: 0;
         background-color: rgba(0, 0, 0, 0.8);
         z-index:2;
-        
-        
+         
   }
   
 }
 `;
-
 
 export const LinckStylos= styled(NavLink) `
 list-style:none;
@@ -57,7 +57,7 @@ color: white;
 font-size: 20px;
 padding-left: 6px;
 &:hover {
-    color: #5656e6; }
+    color: #3c3cb9; }
 
     @media (max-width: 1099px) {
       font-size: 30px;

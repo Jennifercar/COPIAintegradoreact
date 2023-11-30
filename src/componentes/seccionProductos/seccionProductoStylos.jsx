@@ -1,7 +1,7 @@
 import styled from "styled-components"; 
 
 export const SeccionContainerStylos = styled.div`
-	padding-top: 30px;
+	
 	color:white;
 	background-color: #051b28;
 	display: flex;
@@ -9,6 +9,9 @@ export const SeccionContainerStylos = styled.div`
 	align-items: center;
 	flex-direction: column;
 	width: 100%;
+
+
+
 	
 	
 	@media (max-width: 768px) {
@@ -24,16 +27,25 @@ export const ContainerProductosStylos = styled.div`
 	flex-wrap: wrap;
 	gap: 32px;
 	
+	
 `;
 export const Productos = styled.div`
 	background: #0b2739;
 	width: 300px;
+	height: 450px;
+	object-fit: cover;
 	border-radius: 8px;
 	padding: 1rem;
+	max-width:1400px;
+	display:flex;
+	flex-direction:column;
+	align-items:flex-start;
 	
 
 	img {
 		width: 100%;
+		height: 200px;
+		object-fit: cover;
 		border-radius:8px;
 		
 	}
@@ -57,6 +69,7 @@ export const Productos = styled.div`
 export const BotonCompraStylos =styled.button`
 	display: flex;
 	justify-content: center;
+	align-items:center;
 	border-radius: 20px;
 	border-color: #ff008a;
 	background-color: #0b2739;

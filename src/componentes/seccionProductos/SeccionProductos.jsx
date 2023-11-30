@@ -13,7 +13,8 @@ let productos = useSelector(state => state.productos.products)
 
 const categoriaSelecionada = useSelector(state => state.categorias.categoriaSelecionada)
 
-//const TotalProductos = useSelector((state) => state.productos.TotalProductos)
+
+  
 
 if (categoriaSelecionada) {
   productos={
