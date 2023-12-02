@@ -9,7 +9,7 @@ const CardModal = () => {
 
   const dispatch = useDispatch();
  
-  const {productoDelCarrito}= useSelector(state => state.modal);
+  const {productoDelCarrito}= useSelector(state => state.modal) || [];
 
   const [compraExitosa, setCompraExitosa] = useState(false);
  

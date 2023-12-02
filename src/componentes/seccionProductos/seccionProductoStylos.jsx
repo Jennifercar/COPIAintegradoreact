@@ -96,3 +96,4 @@ export const MensajeConfirmacion = styled.div`
   transform: translateY(${props => props.mensaje ? '0' : '100%'});
   
 `
+//hacer media querys del mensaje de produto agrgado
