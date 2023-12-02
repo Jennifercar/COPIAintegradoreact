@@ -22,6 +22,16 @@ const CardModal = () => {
         setCompraExitosa(true);
         dispatch(vaciarCarrito());
       };   
+
+  const [eliminado, setEliminado] = useState(false);
+  const vaciarCarritoConfirm =(itemId) => {
+    const confirmacion = window.confirm ('¿Deceas vaciar tu carrito?');
+    if(confirmacion) {
+      dispatch(vaciarCarrito(itemId));
+      setEliminado(true);
+      
+    }
+  }
   return (
     <>
     
@@ -40,7 +50,7 @@ const CardModal = () => {
 
 {productoDelCarrito.length > 0 && (
 
-  <ButtonStylos onClick={() => dispatch(vaciarCarrito())}>vaciar carrito</ButtonStylos>
+  <ButtonStylos onClick={() => vaciarCarritoConfirm(null)}>vaciar carrito</ButtonStylos>
 
   )}
 

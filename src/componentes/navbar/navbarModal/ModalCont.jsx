@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import {  agregarAlCarrito, sacarItem ,borrarLosProductos } from '../../../redux/modalSlice/modalSlice';
 import { ButtonStylos, 
@@ -13,10 +13,21 @@ import Contador from '../../../util/contador/Contador';
 const ModalCont = ({cardImg,name,precio, id, quantity})=> {
 
 const dispatch = useDispatch()
+const [elimado, setEliminado] = useState(false); 
+
+ const confirmarEliminacion =(itemId) => {
+  const confirmacion = window.confirm ('¿Deceas eliminar este ticket?');
+  if(confirmacion) {
+    dispatch(borrarLosProductos(itemId));
+    setEliminado(true);
+    
+  }
+}
+
 
 return (
     <ContainerCard>
-
+ 
       <img src={cardImg} alt={name} />
       <h2>{name}</h2>
       <h2>{formatoPrecio(precio)}</h2>
@@ -26,9 +37,11 @@ return (
           <Contador><h2>{quantity}</h2></Contador>
         <ButtonStylos onClick={() => dispatch(agregarAlCarrito({cardImg,precio, name, quantity,id }))}>+</ButtonStylos>
         
-        <ButtonStylos onClick={() => dispatch(borrarLosProductos(id))}><BiSolidTrash/></ButtonStylos>
+        <ButtonStylos onClick={() => confirmarEliminacion(id)}><BiSolidTrash/></ButtonStylos>
           
-      </ContadorButtonContainerStylos>
+     </ContadorButtonContainerStylos>
+
+     
         
        
       </ContainerCard>
