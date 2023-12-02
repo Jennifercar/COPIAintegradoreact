@@ -9,6 +9,7 @@ export const SeccionContainerStylos = styled.div`
 	align-items: center;
 	flex-direction: column;
 	width: 100%;
+	
 
 
 
@@ -28,6 +29,7 @@ export const ContainerProductosStylos = styled.div`
 	gap: 32px;
 	
 	
+	
 `;
 export const Productos = styled.div`
 	background: #0b2739;
@@ -40,6 +42,7 @@ export const Productos = styled.div`
 	display:flex;
 	flex-direction:column;
 	align-items:flex-start;
+	
 	
 
 	img {
@@ -79,4 +82,17 @@ export const BotonCompraStylos =styled.button`
     height: 38px;
 	cursor: pointer;
 	font-size:19px;
+`
+export const MensajeConfirmacion = styled.div`
+ position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #2ecc71;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  transform: translateY(${props => props.mensaje ? '0' : '100%'});
+  
 `
