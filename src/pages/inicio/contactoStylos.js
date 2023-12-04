@@ -7,11 +7,12 @@ const baseFontSize = '1rem';
 export const ContactosContainerStylos = styled.div `
 width: 100%;
 display: flex;
-
+justify-content:center;
+align-items: center;
 background-color: black;
 @media (max-width: 1000px){
       flex-direction:column-reverse;
-      align-items:center;
+
 
     }
 
@@ -24,7 +25,7 @@ justify-content:center;
     background-image: url(${imgen});
     background-size: cover;
     @media (max-width: 1000px){
-      width: 100%;
+    width:100%;
       
     }
     
@@ -49,8 +50,7 @@ width: 50%;
 display: flex;
 flex-direction: column;
 justify-content:center;
-align-items: flex-start;
-
+align-items: center;
 background-color: black;
 color:white;
 @media (max-width: 1000px){
@@ -65,10 +65,9 @@ export const FormStylos = styled(Form) `
  display: flex;
  flex-direction:column;
  align-items:flex-start;
- flex-wrap: wrap;
+ justify-content:center;
  gap:15px;
- column-gap: 30px;
-	row-gap: 25px;
+ 
   @media (max-width: 1000px){
       
       
@@ -88,14 +87,14 @@ display: flex;
 gap:5px;
 flex-direction: column;
 align-items:center;
-align-items: flex-start;
+justify-content:center;
+
 `
 
 
 export const InputLabelStylos =styled.label`
 font-size: 1rem;
-display: flex;
-align-items:flex-start;
+align-self:flex-start;
 
 
 `
@@ -108,6 +107,7 @@ export const InputStylos = styled.input`
 	background: transparent;
 	color: white;
 	outline: none;
+ 
 `;
 export const ErrorSpanStylos =styled.span`
 
@@ -115,14 +115,15 @@ color:red;
 
 `
 export const FormButton = styled.button`
+display:flex;
+align-items:center;
+justify-content:center;
   background-color: rgba(0, 0, 0, 0.5); 
-  display:flex;
-  
   color: #4283ac; 
   border: 1px solid;
   padding: 3px 19px;
   font-size: ${parseFloat(baseFontSize) * 1.5}rem;
-  margin: 5px 50px 10px;
+  margin: 0 auto;
   cursor: pointer;
   text-decoration: none;
   transition: background-color 0.3s ease; 
@@ -130,7 +131,5 @@ export const FormButton = styled.button`
   &:hover {
     color:  rgb(106, 106, 207); 
   }
-  @media (max-width: 1000px){
-    margin: 5px 0px 5px;
-  }
+  
 `;

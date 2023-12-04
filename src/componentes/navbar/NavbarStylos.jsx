@@ -18,7 +18,7 @@ export const Navbarcontainerstylos = styled.header `
     gap: 1rem;
  }
 	img{
-    max-width: 20%;
+    max-width: 193px;
 	
   }
 
@@ -41,16 +41,11 @@ export const Navbarcontainerstylos = styled.header `
          
   }
   img{
-    max-width: 25%;
+    max-width: 170px;
 
   }
 }
-@media (max-width: 800px) {
-  img{
-    max-width: 25%;
 
-  }
-}
 `;
 
 export const LinckStylos= styled(NavLink) `
