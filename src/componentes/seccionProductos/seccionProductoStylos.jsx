@@ -42,9 +42,9 @@ export const Productos = styled.div`
 	display:flex;
 	flex-direction:column;
 	align-items:flex-start;
+	max-width: 1400px;
 	
-	
-
+margin: 0 auto;
 	img {
 		width: 100%;
 		height: 200px;

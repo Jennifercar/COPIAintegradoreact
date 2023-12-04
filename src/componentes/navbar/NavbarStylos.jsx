@@ -18,17 +18,12 @@ export const Navbarcontainerstylos = styled.header `
     gap: 1rem;
  }
 	img{
-    max-width: 7rem;
+    max-width: 20%;
 	
-    border-radius: 50%;
-
   }
 
 @media (max-width: 1099px) {
-  img {
-    margin-left: 0;
-    margin-bottom: 10px;
-  }
+  
   ul{
     
         width:100%;
@@ -38,7 +33,6 @@ export const Navbarcontainerstylos = styled.header `
         flex-direction: column;
         align-items: center;
         gap: 1rem;
-        position: absolute;
         top: 0;
         right: 0;
         bottom: 0;
@@ -46,7 +40,16 @@ export const Navbarcontainerstylos = styled.header `
         z-index:2;
          
   }
-  
+  img{
+    max-width: 25%;
+
+  }
+}
+@media (max-width: 800px) {
+  img{
+    max-width: 25%;
+
+  }
 }
 `;
 
@@ -97,7 +100,9 @@ export const MenuStylos = styled.div`
   
   @media (max-width: 1099px) {
     display: block;
-    position: relative;
+    
   }
 `;
-
+export const ModalCont = styled.div`
+  display:flex;
+`;
