@@ -6,7 +6,7 @@ import {
 }  from './modalUtils';
 
 const INITIAL_STATE = {
-  menuOculto: true,
+  menuOculto: false,
   productoDelCarrito: [],
 };
 

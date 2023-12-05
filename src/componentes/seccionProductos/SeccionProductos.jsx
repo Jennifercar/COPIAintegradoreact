@@ -13,28 +13,23 @@ let productos = useSelector(state => state.productos.products)
 
 const categoriaSelecionada = useSelector(state => state.categorias.categoriaSelecionada)
 
-
+let todosLosproductos = Object.values(productos).flat();
   
 
 if (categoriaSelecionada) {
-  productos={
-    [categoriaSelecionada]: productos[categoriaSelecionada]
-  };
+  todosLosproductos= 
+   productos[categoriaSelecionada];
+  
 }
 
   return (
     <>
     <SeccionContainerStylos>
         <ContainerProductosStylos>
-            {
-              Object.entries(productos).map(([,tikets]) =>{
-                return tikets.map((tiket) => {
-                return  <Productos {...tiket} key= {tiket.id}/>
-                  
-                });
-              })
-            }     
-               
+         
+        {todosLosproductos.map(tiket => (
+            <Productos {...tiket} key={tiket.id} />
+          ))} 
             
         </ContainerProductosStylos>
     </SeccionContainerStylos>

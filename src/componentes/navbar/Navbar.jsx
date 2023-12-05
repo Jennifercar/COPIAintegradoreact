@@ -13,8 +13,8 @@ import CardModal from './navbarModal/CardModal';
 import { useDispatch, useSelector } from 'react-redux';
 import {toggleMenu} from '../../redux/modalSlice/modalSlice';
 import { ModalContainer, 
-  ModalContent, 
-  ModalHeader,
+         ModalContent, 
+         ModalHeader,
 } from './navbarModal/ModalStylos'
 import { BiSolidXCircle } from "react-icons/bi";
 import { abrirMenu } from '../../redux/menuHamburSlice/menuHamburSlice';
