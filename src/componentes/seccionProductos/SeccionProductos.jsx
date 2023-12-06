@@ -1,5 +1,5 @@
-import React from 'react'
-import { ContainerProductosStylos, SeccionContainerStylos } from './seccionProductoStylos';
+import React, { useState } from 'react'
+import {BotonVerMas, ContainerProductosStylos, SeccionContainerStylos } from './seccionProductoStylos';
 import  Productos  from './Card';
 import { useSelector } from 'react-redux';
 
@@ -22,16 +22,28 @@ if (categoriaSelecionada) {
   
 }
 
+const [mostrarMas, setmostrarMas] = useState(6);
+const produtosPorPagina =6 ;
+
+const mostrarMasProductos =()=> {
+  setmostrarMas(prev => prev + produtosPorPagina);
+};
   return (
     <>
     <SeccionContainerStylos>
         <ContainerProductosStylos>
          
-        {todosLosproductos.map(tiket => (
+        {todosLosproductos.slice(0, mostrarMas).map(tiket => (
             <Productos {...tiket} key={tiket.id} />
           ))} 
             
-        </ContainerProductosStylos>
+        </ContainerProductosStylos> 
+        {mostrarMas < todosLosproductos.length && (
+
+          <BotonVerMas onClick={mostrarMasProductos}>Ver mas</BotonVerMas>)}
+        
+
+        
     </SeccionContainerStylos>
 
     </>

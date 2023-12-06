@@ -83,6 +83,20 @@ export const BotonCompraStylos =styled.button`
 	cursor: pointer;
 	font-size:19px;
 `
+export const BotonVerMas = styled.button `
+display: flex;
+	justify-content: center;
+	align-items:center;
+	border-radius: 15px;
+	border-color: #ff008a;
+	background-color: #0b2739;
+	color: #fff;
+	margin: 50px 20px;
+	padding:10px;
+	cursor: pointer;
+	font-size:19px;
+`;
+
 export const MensajeConfirmacion = styled.div`
  position: fixed;
   bottom: 0;
@@ -94,6 +108,7 @@ export const MensajeConfirmacion = styled.div`
   text-align: center;
   transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
   transform: translateY(${props => props.mensaje ? '0' : '100%'});
+
+
   
 `
-//hacer media querys del mensaje de produto agrgado
