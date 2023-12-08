@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import imgen from '../../componentes/assets/pexels-erik-mclean-4065806.jpg';
+
 import { Form } from 'formik';
 
 const baseFontSize = '1rem';
@@ -10,53 +10,29 @@ display: flex;
 justify-content:center;
 align-items: center;
 background-color: black;
-@media (max-width: 1000px){
-      flex-direction:column-reverse;
 
-
-    }
 
 `;
-export const ContactoStylos = styled.div `
+
+export const MapaStylos = styled.div `
 display:flex;
 justify-content:center;
-    width: 50%;
-    height: 50vh;
-    background-image: url(${imgen});
-    background-size: cover;
-    @media (max-width: 1000px){
-    width:100%;
-      
-    }
-    
+align-items: center;
+flex-direction:column;
+padding:0 60px;
+color: white;
 `;
-export const ParrafoContactos = styled.p`
-        width:90%;
-        display:flex;
-        align-items:center;
-        font-family: 'Arial, sans-serif'; 
-        font-size: ${baseFontSize};;
-        background-color: rgba(0, 0, 0, 0.5);
-       text-align:center;
-        color:white;
-        @media (max-width: 1000px){
-      font-size: ${parseFloat(baseFontSize) * 1.5}rem;
-    }
-`
-
+//agregar mediaqq
 
 export const FormContainer = styled.div `
-width: 50%;
+width: 80%;
 display: flex;
 flex-direction: column;
 justify-content:center;
 align-items: center;
 background-color: black;
 color:white;
-@media (max-width: 1000px){
-  width: 100%;
- 
-    }
+
 
 
 `;
@@ -68,12 +44,10 @@ export const FormStylos = styled(Form) `
  justify-content:center;
  gap:15px;
  
-  @media (max-width: 1000px){
-      
-      
-    }
+
   
-`
+`;
+
 
 export const TituloForm = styled.h1 `
 

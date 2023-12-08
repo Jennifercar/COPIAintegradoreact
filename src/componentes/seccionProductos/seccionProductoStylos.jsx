@@ -9,6 +9,7 @@ export const SeccionContainerStylos = styled.div`
 	align-items: center;
 	flex-direction: column;
 	width: 100%;
+	padding: 20px 0;
 	
 
 
@@ -33,8 +34,8 @@ export const ContainerProductosStylos = styled.div`
 `;
 export const Productos = styled.div`
 	background: #0b2739;
-	width: 300px;
-	height: 450px;
+	width: 352px;
+	height: 442px;
 	object-fit: cover;
 	border-radius: 8px;
 	padding: 1rem;
@@ -42,9 +43,7 @@ export const Productos = styled.div`
 	display:flex;
 	flex-direction:column;
 	align-items:flex-start;
-	max-width: 1400px;
 	
-margin: 0 auto;
 	img {
 		width: 100%;
 		height: 200px;
@@ -64,8 +63,8 @@ margin: 0 auto;
 	h3{
 		font-weight:400;
 	}
-	@media (max-width: 768px) {
-		width: 250px;
+	@media (max-width: 480px) {
+		width:250px;
 		text-align: left;
 	}
 `;
@@ -85,13 +84,14 @@ export const BotonCompraStylos =styled.button`
 `
 export const BotonVerMas = styled.button `
 display: flex;
+flex-direction:column;
 	justify-content: center;
 	align-items:center;
 	border-radius: 15px;
 	border-color: #ff008a;
 	background-color: #0b2739;
 	color: #fff;
-	margin: 50px 20px;
+	margin: 35px 0;
 	padding:10px;
 	cursor: pointer;
 	font-size:19px;

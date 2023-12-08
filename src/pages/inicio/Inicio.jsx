@@ -2,17 +2,17 @@ import {Formik} from 'formik';
 import React from 'react'
 import gifInicio from '../../componentes/assets/gifInicio.gif'
 import { InicioContainerStylos, InicioStylos, ReservaAquiButton } from './InicioStylos'
-import { ContactoStylos, 
+import {  
   ContactosContainerStylos, 
   FormContainer, 
   FormStylos, 
-  ParrafoContactos,
+  MapaStylos, 
   TituloForm } from './contactoStylos'
 import FormInput from '../inicio/FormInput';
 import BotonSubmit from '../inicio/BotonSubmit';
 import { initialValues } from '../../formik/initialValues';
 import { validentionSchema } from '../../formik/esquemaValidacion';
-
+import Mapa from './MapaGoogle';
 
 
 
@@ -36,7 +36,9 @@ const Inicio = () => {
 
 
 <ContactosContainerStylos>
+  
  <FormContainer>
+ 
    <TituloForm>Contactenos</TituloForm>
 
    <Formik
@@ -70,13 +72,13 @@ const Inicio = () => {
 
 
      </Formik>
-     
      </FormContainer>
-  <ContactoStylos> 
-      <ParrafoContactos>"Te invitamos a utilizar nuestro formulario de contacto para aclarar sus dudas, 
-        asegurarse de no perderse ningún evento y adquirir las mejores entradas. 
-        Estamos aquí para hacer que sus noches sean especiales."</ParrafoContactos>
-   </ContactoStylos>
+
+     <MapaStylos> 
+     <h2>Información de contacto</h2>
+      <Mapa/>
+      </MapaStylos>
+
    </ContactosContainerStylos>
     
     </>
