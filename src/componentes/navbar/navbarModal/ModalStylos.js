@@ -59,10 +59,21 @@ justify-content:center;
 align-items:center;
 `;
 
+
+export const TextosContainerStylos = styled.div`
+width:250px;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+`
+
+
 export const ContadorButtonContainerStylos = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
+
 `;
 
 export const TotalStylos = styled.span`

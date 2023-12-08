@@ -3,7 +3,8 @@ import { useDispatch } from 'react-redux';
 import {  agregarAlCarrito, sacarItem ,borrarLosProductos } from '../../../redux/modalSlice/modalSlice';
 import { ButtonStylos, 
          ContadorButtonContainerStylos, 
-    ContainerCard, } from '../navbarModal/ModalStylos';
+    ContainerCard,
+    TextosContainerStylos, } from '../navbarModal/ModalStylos';
 
 import { BiSolidTrash } from "react-icons/bi";
 import { formatoPrecio } from '../../../util/formatoPrecio';
@@ -27,11 +28,12 @@ const [elimado, setEliminado] = useState(false);
 
 return (
     <ContainerCard>
- 
+  
       <img src={cardImg} alt={name} />
+      <TextosContainerStylos>
       <h2>{name}</h2>
       <h2>{formatoPrecio(precio)}</h2>
-
+      </TextosContainerStylos>
       <ContadorButtonContainerStylos>
         <ButtonStylos onClick={() => dispatch(sacarItem(id))}>-</ButtonStylos>
           <Contador><h2>{quantity}</h2></Contador>

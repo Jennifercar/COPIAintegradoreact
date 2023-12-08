@@ -21,6 +21,7 @@ background: #0b2739;
     flex-direction: column;
     justify-content:center;
     
+    
   }
   
 `;
