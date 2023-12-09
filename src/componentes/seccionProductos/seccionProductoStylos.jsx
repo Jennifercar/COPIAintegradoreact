@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const SeccionContainerStylos = styled.div`
 	
 	color:white;
-	background-color: #051b28;
+	
 	display: flex;
 	justify-content:center;
 	align-items: center;
@@ -54,7 +54,7 @@ export const Productos = styled.div`
 	h1 {
 		font-weight: 600;
 		margin: 0;
-		color:#ffffff;
+		color:#ebe8e8;
 	}
 	h2 {
 		color: #ffffff;

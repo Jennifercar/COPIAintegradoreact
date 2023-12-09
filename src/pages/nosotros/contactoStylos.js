@@ -9,8 +9,9 @@ width: 100%;
 display: flex;
 justify-content:center;
 align-items: center;
-background-color: black;
-
+background: rgb(0,0,0);
+background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(5,27,40,1) 28%, rgba(6,55,117,1) 51%);
+padding-bottom:20px;
 
 `;
 
@@ -19,7 +20,7 @@ display:flex;
 justify-content:center;
 align-items: center;
 flex-direction:column;
-padding:0 60px;
+margin-left:134px;
 color: white;
 `;
 //agregar mediaqq
@@ -30,7 +31,8 @@ display: flex;
 flex-direction: column;
 justify-content:center;
 align-items: center;
-background-color: black;
+background: rgb(0,0,0);
+background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(5,27,40,1) 28%, rgba(6,55,117,1) 51%);
 color:white;
 
 
@@ -92,8 +94,9 @@ export const FormButton = styled.button`
 display:flex;
 align-items:center;
 justify-content:center;
-  background-color: rgba(0, 0, 0, 0.5); 
-  color: #4283ac; 
+  background-color: transparent; 
+  color: white; 
+  border-radius:5px;
   border: 1px solid;
   padding: 3px 19px;
   font-size: ${parseFloat(baseFontSize) * 1.5}rem;
