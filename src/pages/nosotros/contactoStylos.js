@@ -9,6 +9,7 @@ width: 100%;
 display: flex;
 justify-content:center;
 align-items: center;
+flex-direction: column;
 background: rgb(0,0,0);
 background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(5,27,40,1) 28%, rgba(6,55,117,1) 51%);
 padding-bottom:20px;
