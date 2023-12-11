@@ -100,7 +100,8 @@ export const MensajeConfirmacion = styled.div`
   width: 100%;
   background-color: #2ecc71;
   color: white;
-  padding: 10px;
+  font-size:1.1rem;
+  padding: 12px;
   text-align: center;
   transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
   transform: translateY(${props => props.mensaje ? '0' : '100%'});

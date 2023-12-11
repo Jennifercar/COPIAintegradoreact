@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 import { Form } from 'formik';
 
-const baseFontSize = '1rem';
 
 export const ContactosContainerStylos = styled.div `
 width: 100%;
@@ -17,7 +16,7 @@ padding-bottom:20px;
 `;
 export const LineaDivisoriaContactosStylos = styled.div `
  height: 5px;
-  width: 80%;
+  width: 90%;
   background: #5d94b6;
   border-radius: 15px;
   
@@ -58,7 +57,7 @@ export const FormStylos = styled(Form) `
 
 export const TituloForm = styled.h1 `
 
-font-size: ${parseFloat(baseFontSize) * 1.5}rem;
+font-size: 1.5rem;
 `;
 
 
@@ -104,7 +103,7 @@ justify-content:center;
   border-radius:5px;
   border: 1px solid;
   padding: 3px 19px;
-  font-size: ${parseFloat(baseFontSize) * 1.5}rem;
+  font-size: 1.5rem;
   margin: 0 auto;
   cursor: pointer;
   text-decoration: none;
@@ -114,4 +113,7 @@ justify-content:center;
     color:  rgb(106, 106, 207); 
   }
   
+  @media (max-width: 639px) {
+    font-size: 1rem;
+	}
 `;

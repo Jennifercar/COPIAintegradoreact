@@ -18,7 +18,7 @@ export const Navbarcontainerstylos = styled.header `
     gap: 1rem;
  }
 	img{
-    max-width: 193px;
+    max-width: 172px;
 	
   }
 

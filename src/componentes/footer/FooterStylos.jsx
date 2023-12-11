@@ -25,7 +25,7 @@ export const ContainerContactoStylos = styled.div `
     font-size:30px;
 
 
-    @media (max-width: 320px) {
+    @media (max-width: 390px) {
     font-size: 20px; 
   }
     
@@ -34,7 +34,7 @@ export const ContainerContactoStylos = styled.div `
 export const ContactoStylos = styled.div `
 	font-size:27px;
 
-    @media (max-width: 320px) {
+    @media (max-width: 390px) {
     font-size: 20px; }
 `;
 export const RedesContainerSocialeStylos = styled.div `
@@ -42,7 +42,7 @@ display:flex;
     justify-content: center;
 	flex-direction: column;
     font-size:30px;
-    @media (max-width: 320px) {
+    @media (max-width: 390px) {
     font-size: 20px; }
 `
 export const RedeSocialeStylos = styled.div `
