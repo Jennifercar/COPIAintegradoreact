@@ -11,10 +11,6 @@ export const SeccionContainerStylos = styled.div`
 	width: 100%;
 	padding: 20px 0;
 	
-
-
-
-	
 	
 	@media (max-width: 768px) {
 		text-align: center;

@@ -67,6 +67,7 @@ ul{
   display:flex;
 align-items:center;
 gap:50px;
+padding-left:0px;
 
 @media (max-width: 960px){
     flex-direction:column;
@@ -81,7 +82,7 @@ gap:50px;
 ul li {
   
   list-style:none;
-  font-size:25px;
+  font-size:21px;
   font-weight:bold;
   text-align: center;
 
@@ -97,7 +98,7 @@ ul li {
     height:auto;
     
   }
-  //solucionar : centrar la lista despues de los 960
+ 
 `
 
 

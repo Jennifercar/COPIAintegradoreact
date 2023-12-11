@@ -15,25 +15,29 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(5,27,40,1) 28%, rgba(
 padding-bottom:20px;
 
 `;
-
-export const MapaStylos = styled.div `
-display:flex;
-justify-content:center;
-align-items: center;
-flex-direction:column;
-margin-left:134px;
-color: white;
+export const LineaDivisoriaContactosStylos = styled.div `
+ height: 5px;
+  width: 80%;
+  background: #5d94b6;
+  border-radius: 15px;
+  
 `;
-//agregar mediaqq
+export const TextoContactoStylos = styled.div `
+width:75%;
+ color:white;
+ padding:20px 0;
+ font-size:18px;
+ text-align:center;
+  
+`;
 
 export const FormContainer = styled.div `
-width: 80%;
+width: 70%;
 display: flex;
 flex-direction: column;
 justify-content:center;
 align-items: center;
-background: rgb(0,0,0);
-background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(5,27,40,1) 28%, rgba(6,55,117,1) 51%);
+background-color:transparent;
 color:white;
 
 

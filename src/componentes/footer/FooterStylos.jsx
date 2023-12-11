@@ -42,6 +42,8 @@ display:flex;
     justify-content: center;
 	flex-direction: column;
     font-size:30px;
+    @media (max-width: 320px) {
+    font-size: 20px; }
 `
 export const RedeSocialeStylos = styled.div `
     display:flex;
