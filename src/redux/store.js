@@ -17,7 +17,7 @@ const reducers = combineReducers({
 const persistConfig = {
   key: 'root',
   storage,
-  lista: ['modal'],
+  whitelist: ['modal'],
 };
 
 const persistedReducer = persistReducer(persistConfig, reducers);

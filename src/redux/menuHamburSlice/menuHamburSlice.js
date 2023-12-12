@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const INITIAL_STATE = {
-  menuHamburguesa: false,
+  menuHamburguesa: true,
 };
 
 const userSlice = createSlice({
