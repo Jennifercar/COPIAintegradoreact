@@ -43,6 +43,7 @@ const Navbar = () => {
         <div className="menuHamburguesa">
         <ul>
           <li><LinckStylos to="/" onClick={cerrarMenu}>Inicio</LinckStylos></li>
+          <li><LinckStylos to="/registro" onClick={cerrarMenu}>Registro</LinckStylos></li>
           <li><LinckStylos to="/nosotros" onClick={cerrarMenu}>Quienes somos?</LinckStylos></li>
           <li><LinckStylos to="/paginaDeProductos" onClick={cerrarMenu}>Tu Ticket</LinckStylos></li>
           <li><LinckStylos><BsCartFill onClick={manejarClickCarrito}/></LinckStylos></li>
@@ -68,6 +69,7 @@ const Navbar = () => {
 
       <ContainerLinckStylos>
         <LinckStylos to="/">Inicio</LinckStylos>
+        <li><LinckStylos to="/registro" onClick={cerrarMenu}>Registro</LinckStylos></li>
         <LinckStylos to="/nosotros">Quienes somos?</LinckStylos>
         <LinckStylos to="/paginaDeProductos">Tu Ticket</LinckStylos>
         <div onClick={manejarClickCarrito}>

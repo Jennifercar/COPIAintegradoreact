@@ -1,64 +1,30 @@
 import styled from 'styled-components';
-
 import { Form } from 'formik';
 
 
-export const ContactosContainerStylos = styled.div `
-width: 100%;
-display: flex;
+export const RegistroContainerStylos = styled.div `
+height:628px;
+display:flex;
 justify-content:center;
-align-items: center;
-flex-direction: column;
-background: rgb(0,0,0);
-padding-bottom:20px;
+align-items:center;
+flex-direction:column;
+gap: 25px;
 
-`;
-export const LineaDivisoriaContactosStylos = styled.div `
- height: 5px;
-  width: 90%;
-  background: #5d94b6;
-  border-radius: 15px;
-  
-`;
-export const TextoContactoStylos = styled.div `
-width:75%;
- color:white;
- padding:20px 0;
- font-size:18px;
- text-align:center;
-  
-`;
 
-export const FormContainer = styled.div `
-width: 70%;
-display: flex;
-flex-direction: column;
-justify-content:center;
-align-items: center;
-background-color:transparent;
-color:white;
 
+h1 {
+  color:white;
+}
 
 
 `;
-
 export const FormStylos = styled(Form) `
  display: flex;
  flex-direction:column;
  align-items:flex-start;
  justify-content:center;
  gap:15px;
- 
-
-  
-`;
-
-
-export const TituloForm = styled.h1 `
-
-font-size: 1.5rem;
-`;
-
+ `;
 
 export const InputContainerStylos =styled.div`
 font-size: 1rem;
@@ -79,7 +45,7 @@ align-self:flex-start;
 `
 export const InputStylos = styled.input`
 	border: 1px solid;
-	border-color: ${({ error }) => (error ? "error" : "red")};
+	border-color: ${({ error }) => (error ? "error" : "white")};
 	border-radius: 5px;
   padding: 0.5vw 7vw;
 	width: 100%;
@@ -116,3 +82,12 @@ justify-content:center;
     font-size: 1rem;
 	}
 `;
+export const LinckStylos =styled.div`
+
+font-size:20px;
+
+color: #7582f3;
+
+
+
+`
