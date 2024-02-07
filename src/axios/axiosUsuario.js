@@ -3,8 +3,7 @@ import axios from 'axios';
 
 export const createUsuario = async (nombre, email, contraseña) => {
   try {
-    await axios.post(`http://localhost:8080/auth/registro
-    `, {
+    await axios.post(`http://localhost:8080/auth/registro`, {
       nombre,
       email,
       contraseña,
