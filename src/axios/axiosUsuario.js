@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export const createUsuario = async (nombre, email, contraseña) => {
   try {
-    await axios.post(`http://localhost:8080/auth/registro`, {
+    await axios.post(`${BASE_URL}/auth/registro`, {
       nombre,
       email,
       contraseña,
@@ -19,7 +19,7 @@ export const createUsuario = async (nombre, email, contraseña) => {
 
 export const loginUsuario = async (email, contraseña) => {
   try {
-    const response = await axios.post(`http://localhost:8080/auth/login`, {
+    const response = await axios.post(`${BASE_URL}/auth/login`, {
       email,
       contraseña,
     });
@@ -32,7 +32,7 @@ export const loginUsuario = async (email, contraseña) => {
 
 
 
-export const verificarUsuario = async (email, code) => {
+/*export const verificarUsuario = async (email, code) => {
   try {
  const response = await axios.patch(`https://tu-ticket-api.vercel.app/`, {
   email,
@@ -47,4 +47,4 @@ return response.data;
 
 }
  
-};
+};*/
