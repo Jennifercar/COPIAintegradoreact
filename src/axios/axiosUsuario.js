@@ -1,34 +1,32 @@
-import axios from 'axios';
-//import { BASE_URL } from '../util/constantes';
+import axios from "axios";
+import { BASE_URL } from "../util/constantes";
 
 export const createUsuario = async (nombre, email, contraseña) => {
-  try {
-    await axios.post(`${BASE_URL}/auth/registro`, {
-      nombre,
-      email,
-      contraseña,
-    });
-
-    const usuario = await loginUsuario (email, contraseña);
-    return usuario;
-  } catch (error) {
-    console.log(error);
-    return alert(error.response.data.errors[0].msg);
-  }
-};
+    try {   
+        const response = await axios.post(`${BASE_URL}auth/registro`,{
+            nombre,
+            email,
+            contraseña
+        });
+        return response.data;
+        
+    } catch (error) {
+        console.log(error);
+    }
+}
 
 export const loginUsuario = async (email, contraseña) => {
-  try {
-    const response = await axios.post(`${BASE_URL}/auth/login`, {
-      email,
-      contraseña,
-    });
-    return response.data;
-  } catch (error) {
-    console.log(error);
-    return alert(error.response.data.msg);
-  }
-};
+    try {
+        const response = await axios.post(`${BASE_URL}auth/login`, {
+          email, 
+          contraseña});
+        return response.data
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+
 
 
 
