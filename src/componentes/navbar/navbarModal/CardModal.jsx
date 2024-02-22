@@ -3,25 +3,27 @@ import {useDispatch, useSelector } from 'react-redux';
 import { ButtonStylos, ProductosWrapperStylos,TotalStylos} from './ModalStylos';
 import { formatoPrecio } from '../../../util/formatoPrecio';
 import ModalCont from '../../navbar/navbarModal/ModalCont';
-import { vaciarCarrito } from '../../../redux/modalSlice/modalSlice';
+import { toggleMenu, vaciarCarrito } from '../../../redux/modalSlice/modalSlice';
+import { useNavigate } from 'react-router-dom';
 
 const CardModal = () => {
 
   const dispatch = useDispatch();
+  const navigate= useNavigate()
  
   const {productoDelCarrito}= useSelector(state => state.modal) || [];
 
-  const [compraExitosa, setCompraExitosa] = useState(false);
+  //const [compraExitosa, setCompraExitosa] = useState(false);
  
 
   const totalPrecio = productoDelCarrito.reduce((acc, item) => {
         return (acc += item.precio * item.quantity)
       }, 0)
     
-  const manejarCompra = () => {
-        setCompraExitosa(true);
-        dispatch(vaciarCarrito());
-      };   
+  //const manejarCompra = () => {
+   //     setCompraExitosa(true);
+   //     dispatch(vaciarCarrito());
+   //   };   
 
   const [eliminado, setEliminado] = useState(false);
   const vaciarCarritoConfirm =(itemId) => {
@@ -55,13 +57,11 @@ const CardModal = () => {
   )}
 
 {productoDelCarrito.length > 0 && (
-<ButtonStylos onClick={manejarCompra}>comprar</ButtonStylos>
+<ButtonStylos onClick={() => {
+                  navigate('/registro');
+                  dispatch(toggleMenu())
+                  }}>iniciar compra</ButtonStylos>
 )}
-{compraExitosa && (
-        <p style={{ color: 'green', fontSize: '1.5rem' }}>
-          ¡Su compra ha sido exitosa! 
-        </p>
-      )}
 
     </>
   );

@@ -21,9 +21,23 @@ const usuarioSlice = createSlice({
         hiddenMenu: !state.hiddenMenu,
       };
     },
-  },
-});
 
-export const { setUsuarioActual, toggleMenuHidden } = usuarioSlice.actions;
+    setVerificado: (state) => {
+      if (state.usuarioActual) {
+        return {
+          ...state,
+          usuarioActual: {
+            ...state.usuarioActual,
+            verificado: true
+          }
+        };
+      }
+      return state;
+    }
+
+  },
+})
+
+export const { setUsuarioActual, toggleMenuHidden, setVerificado } = usuarioSlice.actions;
 
 export default usuarioSlice.reducer;

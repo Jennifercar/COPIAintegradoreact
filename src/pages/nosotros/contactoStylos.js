@@ -79,7 +79,6 @@ align-self:flex-start;
 `
 export const InputStylos = styled.input`
 	border: 1px solid;
-	border-color: ${({ error }) => (error ? "error" : "red")};
 	border-radius: 5px;
   padding: 0.5vw 7vw;
 	width: 100%;

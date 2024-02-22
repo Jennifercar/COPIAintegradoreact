@@ -1,13 +1,14 @@
 import React from 'react';
 import { Formik } from 'formik';
-import { Link } from 'react-router-dom';
+import { Link} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import LoginInput from '../../componentes/UI/login/LoginInput';
 import Submit from '../../componentes/UI/login/submit/Submit';
 import { loginInitialValues } from '../../formik/registroFormik/registroInitialValues';
 import { loginValidationSchema } from '../../formik/registroFormik/registroValidationSchema';
 import { LoginContainerStylos,Form}  from './loginStylos';
 import { loginUsuario } from '../../axios/axiosUsuario';
-import { useDispatch } from 'react-redux';
+import { useDispatch} from 'react-redux';
 import { setUsuarioActual } from '../../redux/usuarioSlice/UsuarioSlice';
 import { LinckStylos } from '../registro/registroStylos';
 
@@ -16,6 +17,11 @@ import { LinckStylos } from '../registro/registroStylos';
 const Login = () => {
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  
+
+
 
   return (
     
@@ -37,6 +43,11 @@ const Login = () => {
                       token: usuario.token
                     })
                   )
+                  if (usuario.usuario.verificado) {
+                    navigate('/');
+                  } else {
+                    navigate('/informeDeVerificado');
+                  }
                 }
             } }
     

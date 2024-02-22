@@ -12,16 +12,17 @@ const navigate = useNavigate();
   return (
 
     <div>
-      {usuarioActual?.verificado ? (
-        <h1>Tu usuario ha sido verificado correctamente</h1>
-      ):(
-        <div>
-          <h1>Valida  tu cuenta para poder acceder a la plataforma</h1>
-     <button onclick={()=>navigate('/validarCuenta')}>
-       validar usuario
-    </button>
+    {usuarioActual?.verificado ? (
+      <h1>Tu usuario ha sido verificado correctamente</h1>
+    ):(
+      <div>
+        <h1>Valida  tu cuenta para poder acceder a la plataforma</h1>
+   <button 
+   onClick={()=>navigate('/validarCuenta')}>
+     validar usuario
+  </button>
 
-        </div>
+      </div>
       )
     
     }

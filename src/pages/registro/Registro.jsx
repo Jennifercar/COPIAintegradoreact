@@ -14,6 +14,7 @@ import { createUsuario } from '../../axios/axiosUsuario';
 const Registro = () => {
 
   const navigate = useNavigate()
+  
 
   return (
     
@@ -32,9 +33,9 @@ const Registro = () => {
 
                 
            actions.resetForm();
-
+           console.log(usuario);
            if (usuario) {
-            navigate("/login")
+            navigate("/informeDeVerificado")
           }
         }}
           >  

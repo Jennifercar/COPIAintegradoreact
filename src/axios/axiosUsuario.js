@@ -27,12 +27,9 @@ export const loginUsuario = async (email, contraseña) => {
 }
 
 
-
-
-
-/*export const verificarUsuario = async (email, code) => {
+export const verificarUsuario = async (email, code) => {
   try {
- const response = await axios.patch(`https://tu-ticket-api.vercel.app/`, {
+ const response = await axios.patch(`${BASE_URL}/auth/verifica`, {
   email,
   code,
  });
@@ -45,4 +42,4 @@ return response.data;
 
 }
  
-};*/
+};

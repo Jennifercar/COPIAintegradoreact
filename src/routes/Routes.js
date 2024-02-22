@@ -4,6 +4,8 @@ import PaginaDeProductos from '../pages/PaginaDeProductos/PaginaDeProductos'
 import Inicio from '../pages/inicio/Inicio'
 import Registro from '../pages/registro/Registro'
 import Login from '../pages/login/Login'
+import InformeDeVerificado from '../pages/verificado/InformeDeVerificado'
+import ValidarCuenta from '../pages/verificado/ValidarCuenta'
 
 const Routes = () => {
   return (
@@ -13,8 +15,10 @@ const Routes = () => {
 
 <Route path="/" element={< Inicio/>} />
 <Route path='/login' element={<Login />} />
-<Route path="registro" element={< Registro/>} />
-<Route path="paginaDeProductos" element={<PaginaDeProductos />} />
+<Route path="/registro" element={< Registro/>} />
+<Route path="/informeDeVerificado" element={< InformeDeVerificado/>} />
+<Route path="/validarCuenta" element={< ValidarCuenta/>} />
+<Route path="/paginaDeProductos" element={<PaginaDeProductos />} />
 <Route path="/nosotros" element={<Nosotros />} />
 
 </ReactDomRoutes>
