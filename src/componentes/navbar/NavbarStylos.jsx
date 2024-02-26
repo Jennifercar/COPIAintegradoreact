@@ -101,3 +101,9 @@ export const MenuStylos = styled.div`
 export const ModalCont = styled.div`
   display:flex;
 `;
+export const MenuHamburguesa = styled.div`
+ display: none; 
+  @media (max-width: 1100px) {
+    display: block; 
+  }
+`;

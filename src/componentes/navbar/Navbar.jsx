@@ -4,6 +4,7 @@ import {
   MenuStylos,
   LinckStylos,
   Navbarcontainerstylos,
+  MenuHamburguesa,
 
 } from './NavbarStylos';
 import logo from '../../../src/componentes/assets/Gold Luxury Initial Circle Logo.png';
@@ -43,6 +44,7 @@ const navigate = useNavigate()
 
   return (
     <Navbarcontainerstylos>
+      <MenuHamburguesa>
       {menuAbierto && (
         <div className="menuHamburguesa">
         <ul>
@@ -54,6 +56,7 @@ const navigate = useNavigate()
         </ul>
         </div>
       )}  
+      </MenuHamburguesa>
       
       {cerrarModal && (<ModalContainer>
           <ModalContent>
