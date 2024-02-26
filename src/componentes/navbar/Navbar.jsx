@@ -13,14 +13,18 @@ import { useDispatch, useSelector} from 'react-redux';
 import {toggleMenu} from '../../redux/modalSlice/modalSlice';
 import { ModalContainer, ModalContent, ModalHeader } from './navbarModal/ModalStylos';
 import CardModal from './navbarModal/CardModal';
+import { useNavigate } from 'react-router-dom';
+import { toggleMenuHidden } from '../../redux/usuarioSlice/UsuarioSlice';
+import UsuarioModal from './usuarioModal/UsuarioModal';
 
 
 const Navbar = () => {
 
   const [menuAbierto, setMenuAbierto]= useState(false)
   const cerrarModal = useSelector(state =>state.modal.menuOculto)
+  const usuarioActual =  useSelector((state)=> state.usuario.usuarioActual);
   const dispatch = useDispatch();
-
+const navigate = useNavigate()
   
  
   const alternarMenuHam =() => {
@@ -62,20 +66,32 @@ const Navbar = () => {
         </ModalContainer>
       )}  
 
+<UsuarioModal />
 
       <LinckStylos to="/">
         <img src={logo} alt="logo" />
       </LinckStylos>
 
       <ContainerLinckStylos>
+      <li>  
         <LinckStylos to="/">Inicio</LinckStylos>
-        <li><LinckStylos to="/registro" onClick={cerrarMenu}>Registro</LinckStylos></li>
         <LinckStylos to="/nosotros">Quienes somos?</LinckStylos>
         <LinckStylos to="/paginaDeProductos">Tu Ticket</LinckStylos>
+
+        <span onClick={() => 
+          usuarioActual
+          ? dispatch(toggleMenuHidden())
+          : navigate("/login")
+        }>
+      <span> 
+        {
+                usuarioActual ? `${usuarioActual.nombre}` : 'Login'
+              } </span>
+              </span>
         <div onClick={manejarClickCarrito}>
           <BsCartFill />
         </div>
-     
+      </li>
    
      </ContainerLinckStylos>
     

@@ -43,7 +43,7 @@ const Login = () => {
                       token: usuario.token
                     })
                   )
-                  if (usuario.usuario.verificado) {
+                  if (usuario.verificado) {
                     navigate('/');
                   } else {
                     navigate('/informeDeVerificado');
