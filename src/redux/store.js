@@ -7,6 +7,7 @@ import categoriaReducer from './categoriaSlice/categoriaSlice';
 import productosReducer from './productos/productoSlice';
 import menuHamburReducer from './menuHamburSlice/menuHamburSlice';
 import usuarioReducer  from './usuarioSlice/UsuarioSlice';
+import compraReducer from './compraSlice/compraSlice';
 
 const reducers = combineReducers({
   modal: modalReducer,
@@ -14,6 +15,7 @@ const reducers = combineReducers({
   productos: productosReducer,
   menu: menuHamburReducer,
   usuario: usuarioReducer,
+  compras: compraReducer
 });
 
 const persistConfig = {

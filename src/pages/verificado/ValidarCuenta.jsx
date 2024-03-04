@@ -20,7 +20,7 @@ const ValidarCuenta = () => {
         console.log("Usuario actual:", usuarioActual);
         if (!usuarioActual) {
           console.log("Redirigiendo a /validarCuenta");
-          navigate('/validarCuenta');
+          navigate('/paginaDeProductos');
         } else if (usuarioActual.verificado) {
           console.log("Redirigiendo a /");
           navigate("/");

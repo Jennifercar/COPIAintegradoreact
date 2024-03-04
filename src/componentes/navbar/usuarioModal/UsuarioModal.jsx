@@ -12,7 +12,7 @@ const UsuarioModal = () => {
             { !hiddenMenu &&
                 <ListaModalUsuarioStylos>
                     <h2>{usuarioActual?.nombre}</h2>
-                    <a href="/login"> Mis ordenes</a>
+                    <a href="/miCompra"> Mis Ticket</a>
                     <span onClick={() => {
                         dispatch(setUsuarioActual(null));
                         dispatch(toggleMenuHidden());

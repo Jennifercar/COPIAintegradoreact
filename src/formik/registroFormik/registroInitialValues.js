@@ -10,6 +10,4 @@
     contraseña: '',
   };
   
-  export const forgotPasswordInitialValues = {
-    email: '',
-  };
+ 
