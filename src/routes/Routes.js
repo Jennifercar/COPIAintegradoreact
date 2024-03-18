@@ -6,8 +6,8 @@ import Registro from '../pages/registro/Registro'
 import Login from '../pages/login/Login'
 import InformeDeVerificado from '../pages/verificado/InformeDeVerificado'
 import ValidarCuenta from '../pages/verificado/ValidarCuenta'
-import MiCompra from '../pages/miCompra/MiCompra'
 import CheckoutTicket from '../pages/checkout/CheckoutTicket'
+import Compras from '../pages/miCompra/MiCompra'
 //import ProtejeRuta from '../componentes/protejeRuta/ProtejeRuta'
 
 
@@ -25,7 +25,7 @@ const Routes = () => {
 <Route path="/validarCuenta" element={< ValidarCuenta/>} />
 <Route path="/paginaDeProductos" element={<PaginaDeProductos />} />
 <Route path="/nosotros" element={<Nosotros />} />
-<Route path="/miCompra" element={<MiCompra />} />
+<Route path="/Compras" element={<Compras />} />
 <Route path='/checkoutTicket' element={<CheckoutTicket />} />
 
   

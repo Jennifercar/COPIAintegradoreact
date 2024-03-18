@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+
 import {useDispatch, useSelector} from "react-redux"
 import { getcompras } from '../../axios/axiosCompras';
 import { fallAlObtenerCompras, limpiarError } from '../../redux/compraSlice/compraSlice';
 import CardsMiCompra from '../../componentes/miCompra/CardsMiCompra';
 
-const MiCompra = () => {
-  const navigate = useNavigate();
+const Compras = () => {
+  
   const dispatch = useDispatch();
 
   const usuarioActual = useSelector(state => state.usuario.usuarioActual)
@@ -34,13 +34,11 @@ const MiCompra = () => {
       <div>
         <h2>Mi Compra</h2>
        <CardsMiCompra/>
-        <div>
-          <button onClick={() => navigate('/paginaDeProductos')}>Volver a comprar</button>
-        </div>
+        
       </div>
     </>
   );
 };
 
 
-export default MiCompra;
+export default Compras;
