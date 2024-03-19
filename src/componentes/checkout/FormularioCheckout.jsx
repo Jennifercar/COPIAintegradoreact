@@ -71,9 +71,9 @@ const CheckoutForm = ({ productoDelCarrito, precio }) => {
             </div>
 
             <div>
-              <label htmlFor="localizacion">Localización</label>
-              <InputField type="text" name="localizacion" />
-              <ErrorMsg name="localizacion" component="div" />
+              <label htmlFor="localidad">Localidad</label>
+              <InputField type="text" name="localidad" />
+              <ErrorMsg name="localidad" component="div" />
             </div>
 
             <div>
