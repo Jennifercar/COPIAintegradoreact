@@ -43,7 +43,8 @@ const CheckoutForm = ({ productoDelCarrito, precio }) => {
           const compraData = {
             items: productoDelCarrito,
             precio,
-            informacionEnvio: { ...values }
+            informacionEnvio: { ...values },
+            total: precio,
           };
 
           try {
