@@ -69,7 +69,7 @@ justify-content:center;
   border: 1px solid;
   padding: 3px 19px;
   font-size: 1.5rem;
-  margin: 0 auto;
+  margin: 10px auto;
   cursor: pointer;
   text-decoration: none;
   transition: background-color 0.3s ease; 

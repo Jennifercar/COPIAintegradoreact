@@ -9,6 +9,24 @@ const Compras = () => {
   
   const dispatch = useDispatch();
 
+  const containerStylos = {
+    color:'white',
+    height:'630px',
+    display:'flex',
+    flexDirection: "column",
+    alignItems: "center",
+    
+  };
+
+  
+
+  const tituloStylos = {
+    fontSize: '30px',
+    '@media (max-width: 390px)': { 
+      fontSize: '60px', 
+    } 
+  };
+
   const usuarioActual = useSelector(state => state.usuario.usuarioActual)
   const {compras, error} = useSelector(state => state.compras);
 
@@ -31,8 +49,8 @@ const Compras = () => {
 
   return (
     <>
-      <div>
-        <h2>Mi Compra</h2>
+      <div style={containerStylos}>
+        <h2 style={tituloStylos}>Mi Compra</h2>
        <CardsMiCompra/>
         
       </div>

@@ -8,6 +8,7 @@ import { verificarUsuario } from "../../axios/axiosUsuario";
 
 import Submit from "../../componentes/UI/login/submit/Submit";
 import { setVerificado } from "../../redux/usuarioSlice/UsuarioSlice";
+import { VerificadoContainerStylos } from "./verificadoStylos";
 
 const ValidarCuenta = () => {
    const dispatch = useDispatch();
@@ -20,7 +21,7 @@ const ValidarCuenta = () => {
         console.log("Usuario actual:", usuarioActual);
         if (!usuarioActual) {
           console.log("Redirigiendo a /validarCuenta");
-          navigate('/validarCuenta');
+          navigate('/login');
         } else if (usuarioActual.verificado) {
           console.log("Redirigiendo a /");
           navigate("/");
@@ -28,9 +29,9 @@ const ValidarCuenta = () => {
       }, [usuarioActual, navigate]);
 
 return ( 
-<div>
-<h1>Validando cuenta</h1>
-<h2>su código se enviaria a su e-mail</h2>
+<VerificadoContainerStylos>
+<h1>Valida tu cuenta</h1>
+<h2>Su código de verificación ha sido enviado a su e-mail</h2>
 <Formik
    initialValues={verificarinitialValues}
    validationSchema={verificarSchema}
@@ -55,7 +56,7 @@ return (
         <Submit>Validar</Submit>
     </Form>
 </Formik>
-</div>
+</VerificadoContainerStylos>
 
 
 

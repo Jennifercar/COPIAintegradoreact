@@ -57,10 +57,10 @@ const navigate = useNavigate()
           ? dispatch(toggleMenuHidden())
           : navigate("/login")
         }>
-      <span> 
+      <LinckStylos> 
         {
                 usuarioActual ? `${usuarioActual.nombre}` : 'Login'
-              } </span>
+              } </LinckStylos>
               </span>
           
           <li><LinckStylos><BsCartFill onClick={manejarClickCarrito}/></LinckStylos></li>
@@ -97,10 +97,10 @@ const navigate = useNavigate()
           ? dispatch(toggleMenuHidden())
           : navigate("/login")
         }>
-      <span> 
+      <LinckStylos> 
         {
                 usuarioActual ? `${usuarioActual.nombre}` : 'Login'
-              } </span>
+              } </LinckStylos>
               </span>
         <div onClick={manejarClickCarrito}>
           <BsCartFill />

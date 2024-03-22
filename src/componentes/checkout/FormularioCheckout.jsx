@@ -8,12 +8,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { crearCompra } from '../../axios/axiosCompras';
 import { vaciarCarrito } from '../../redux/modalSlice/modalSlice';
 import { useNavigate } from 'react-router-dom';
+import { FormButton } from '../../pages/nosotros/contactoStylos';
 
 
 const CheckoutFormContainerStylos = styled.div`
   display: flex;
   flex-direction: column;
-  width: 80%;
+  
 `;
 
 const InputField = styled(Field)`
@@ -83,9 +84,9 @@ const CheckoutForm = ({ productoDelCarrito, precio }) => {
               <ErrorMsg name="domicilio" component="div" />
             </div>
 
-            <button type="submit" disabled={isSubmitting}>
+            <FormButton type="submit" disabled={isSubmitting}>
               {isSubmitting ? 'Enviando...' : 'Iniciar Pedido'}
-            </button>
+            </FormButton>
           </Form>
         )}
       </Formik>

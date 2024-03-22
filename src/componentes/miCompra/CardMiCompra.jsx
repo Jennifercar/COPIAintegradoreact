@@ -6,8 +6,13 @@ const CardMisOrdenes = ({createdAt, total, _id}) => {
 
   const navigate = useNavigate();
 
+  const tituloStylos = {
+    fontSize: '15px',
+   
+  };
+
   return (
-    <div onClick={() => navigate(`${_id}`)}>
+    <div style={tituloStylos} onClick={() => navigate(`${_id}`)}>
       <div>
         <h1>ID de la orden: {_id.slice(0, 7)}</h1>
         <h3>Fecha {formatoData(createdAt)}hs</h3>

@@ -12,6 +12,7 @@ export const ButtonSubmitStyled = styled.button`
   font-weight: 400;
   cursor: pointer;
   margin-top: 15px;
+  
 
   &:disabled {
     cursor: not-allowed;
