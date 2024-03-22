@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Formik } from 'formik';
 import { Link} from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
@@ -20,7 +20,7 @@ const Login = () => {
   const navigate = useNavigate();
 
   
-
+  const [botonActivo, setBotonActivo] = useState(true);
 
 
   return (
@@ -32,6 +32,7 @@ const Login = () => {
             initialValues={loginInitialValues}
             validationSchema={loginValidationSchema}
             onSubmit={async (values) => {
+              setBotonActivo(false);
 
               const usuario = await loginUsuario
                (values.email,
@@ -49,6 +50,7 @@ const Login = () => {
                     navigate('/informeDeVerificado');
                   }
                 }
+                setBotonActivo(true);
             } }
     
             
@@ -67,7 +69,7 @@ const Login = () => {
               <Link to='/registro'>
                 <LinckStylos>¿No tenes cuenta? Crea una</LinckStylos>
               </Link>
-              <Submit>
+              <Submit disabled={!botonActivo}>
                 Ingresar
               </Submit>
             </Form>
