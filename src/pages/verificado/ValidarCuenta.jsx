@@ -9,6 +9,7 @@ import { verificarUsuario } from "../../axios/axiosUsuario";
 import Submit from "../../componentes/UI/login/submit/Submit";
 import { setVerificado } from "../../redux/usuarioSlice/UsuarioSlice";
 import { VerificadoContainerStylos } from "./verificadoStylos";
+import LoginInput from "../../componentes/UI/login/LoginInput";
 
 const ValidarCuenta = () => {
    const dispatch = useDispatch();
@@ -48,7 +49,7 @@ return (
 } 
 >
     <Form>
-        <input  
+        <LoginInput  
         name='code' 
         type="code" 
         placeholder='Código de verificación' />
