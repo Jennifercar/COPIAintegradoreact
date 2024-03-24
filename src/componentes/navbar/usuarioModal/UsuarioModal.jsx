@@ -7,12 +7,16 @@ const UsuarioModal = () => {
     const { usuarioActual, hiddenMenu } = useSelector(state => state.usuario);
     const dispatch = useDispatch();
 
+    const cerrarMenu = () => {
+        dispatch(toggleMenuHidden());
+    };
+
     return (
         <ModalUsuarioContainerStylos isOpen={!hiddenMenu}>
             { !hiddenMenu &&
                 <ListaModalUsuarioStylos>
                     <h2>{usuarioActual?.nombre}</h2>
-                    <a href="/Compras"> Mis Ticket</a>
+                    <a href="/Compras" onClick={cerrarMenu}>Mis Ticket</a> 
                     <span onClick={() => {
                         dispatch(setUsuarioActual(null));
                         dispatch(toggleMenuHidden());
