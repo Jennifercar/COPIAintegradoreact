@@ -52,17 +52,21 @@ const navigate = useNavigate()
          
           <li><LinckStylos to="/nosotros" onClick={cerrarMenu}>Quienes somos?</LinckStylos></li>
           <li><LinckStylos to="/paginaDeProductos" onClick={cerrarMenu}>Tu Ticket</LinckStylos></li>
-          <span onClick={() => 
-          usuarioActual
-          ? dispatch(toggleMenuHidden())
-          : navigate("/login")
-        }>
-      <LinckStylos> 
-        {
-                usuarioActual ? `${usuarioActual.nombre}` : 'Login'
-              } </LinckStylos>
-              </span>
-          
+          <span onClick={() => {
+  if (!usuarioActual) {
+    cerrarMenu(); 
+    navigate("/login")
+  } else {
+    dispatch(toggleMenuHidden()); 
+    cerrarMenu(); 
+  }
+}}>
+  <LinckStylos>
+    {usuarioActual ? `${usuarioActual.nombre}` : 'Login'}
+  </LinckStylos>
+</span>
+
+             
           <li><LinckStylos><BsCartFill onClick={manejarClickCarrito}/></LinckStylos></li>
         </ul>
         </div>
